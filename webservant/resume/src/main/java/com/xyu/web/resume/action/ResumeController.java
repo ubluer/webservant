@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "resume")
 public class ResumeController {
 
+    @RequestMapping(value="index")
     public String index(){
-        return "index";
+        return "views/index";
     }
 }

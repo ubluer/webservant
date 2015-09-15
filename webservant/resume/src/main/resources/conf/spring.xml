@@ -6,7 +6,11 @@
         >
 
     <!--引入jdbc配置文件-->
-    <!--<context:property-placeholder location="classpath:conf/jdbc.properties"/>-->
-    <!-- 扫描文件（自动注入）-->
-    <context:component-scan base-package="cn.springmvc.service"/>
+    <context:property-placeholder location="classpath:conf/jdbc.properties"/>
+    <!-- 扫描文件（自动注入）@service-->
+    <context:component-scan base-package="com.xyu.web.resume"></context:component-scan>
+    <context:component-scan base-package="com.xyu.web">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
 </beans>
