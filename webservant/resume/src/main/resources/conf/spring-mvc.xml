@@ -49,7 +49,7 @@
     </bean>
     <!-- 对模型视图添加前后缀 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="${web.view.prefix}" p:suffix="${web.view.suffix}"/>
+          p:prefix="/WEB-INF/views/" p:suffix=".jsp"/>
 
 
 

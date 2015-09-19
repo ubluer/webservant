@@ -13,6 +13,6 @@ public class ResumeController {
 
     @RequestMapping(value="index")
     public String index(){
-        return "views/index";
+        return "resume/resume-index";
     }
 }
