@@ -10,9 +10,6 @@
 <h2>Hello World!</h2>
 <img id='img' src='img1.jpg' alt='爸爸去哪儿' />
 <div style='background-color: #384757;width:500px;height:100px;font-size:50px;'>new style</div>
-<div id="a">百度</div>
-<div id='parent'><div><a>a</a><a>b</a></div></div>
-<a style='color:green;' href='http://www.baidu.com' target='_blank'> baidu</a>
 <script>
     var id = document.getElementById('a');
     id.innerHTML = 'absdfsa';
