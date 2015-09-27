@@ -1,0 +1,15 @@
+/*
+ * common.css
+ * https://www.xyu.link
+ * Copyright (c) 2015 Xiang Yu
+ * License: GNU
+ */
+
+.fade.in {
+    opacity: 1;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity .15s cubic-bezier(0.4, 0, 0.2, 1);
+}

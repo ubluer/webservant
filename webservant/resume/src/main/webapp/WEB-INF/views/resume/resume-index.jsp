@@ -1,29 +1,38 @@
-<%@ page language="java" pageEncoding="utf-8"%>
+<%@ page language="java" pageEncoding="utf-8" contentType="text/html; charset=utf-8" %>
+<%@include file="/WEB-INF/views/common/taglib.jsp" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <%@ include file="/WEB-INF/views/common/_include.jsp"%>
     <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
-    <link href="/static/plugin/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <![if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta name="description" content="Programmer">
+    <meta name="viewport" content="width=device-width">
+    <!-- resume -->
+    <link href="${ctx}/assets/res/css/resume-main.css" rel="stylesheet">
 </head>
-<body>
-<h1>你好，世界！</h1>
 
+<body class="resume-body">
+<div class="background fade in"></div>
+<div class="grid-flicker background fade in points"></div>
+<main>
+    <div class="resume-main container">
+        <section class="fade in">
+            <h1 class="fade in">FUNC(Xiang:Y)</h1>
+            <h1>
+                <span class="eyebow" style="opacity: 1; transform: matrix(1,0,0,1,0,0);">Hello, world.</span>
+                <span class="large-block" style="opacity: 1; transform: matrix(1,0,0,1,0,0);">I'm a programmer</span>
+                <br>
+                in China.
+            </h1>
+            <p class="lead">
+                <a class="btn btn-lg btn-primary" href="https://github.com/ubluer" style="opacity: 1; transform: matrix(1,0,0,1,0,0);transform-origin: 50% 50% 0px;">Follow me on GitHub</a>
+            </p>
+        </section>
+    </div>
+</main>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/static/plugin/jquery/jquery-1.11.3.js"></script>
+<script src="${ctx}/assets/plugin/jquery/jquery-1.11.3.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/static/plugin/bootstrap/js/bootstrap.js"></script>
+<script src="${ctx}/assets/plugin/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
