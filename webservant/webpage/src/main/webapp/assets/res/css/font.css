@@ -1,0 +1,11 @@
+/*
+ * font.css
+ * https://www.xyu.link
+ * Copyright (c) 2015 Xiang Yu
+ * License: GNU
+ */
+@font-face {
+    font-family: 'Amatic SC';
+    src:url('../font/AmaticSC.woff2') format('woff2'),
+    url('../font/AmaticSC-Regular.ttf') format('truetype')
+}
