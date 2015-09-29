@@ -6,7 +6,7 @@
   <artifactId>rootparent</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>../resume</module>
+    <module>../webpage</module>
   </modules>
   <packaging>pom</packaging>
 
