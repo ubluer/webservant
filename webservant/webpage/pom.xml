@@ -7,9 +7,9 @@
         <relativePath>../rootparent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>resume</artifactId>
+    <artifactId>webpage</artifactId>
     <packaging>war</packaging>
-    <name>Resume</name>
+    <name>Webpage</name>
     <url>http://www.xyu.link</url>
     <dependencies>
         <dependency>
