@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyu.sys.user.dao.UserDao">
+
+  <!-- 全部列 -->
+  <sql id="allmenbers">
+    id,
+    uuid,
+    username,
+    password
+  </sql>
+  <!-- 全列除ID -->
+  <sql id="menberEcpId">
+    username,
+    password
+  </sql>
+  <!-- 插入User -->
+  <!--<insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">-->
+    <!--INSERT-->
+    <!--INTO user (-->
+    <!--username,-->
+    <!--password)-->
+    <!--VALUES-->
+    <!--(-->
+    <!--#{username},-->
+    <!--#{password})-->
+  <!--</insert>-->
+  <!-- 通过id查找User -->
+  <select id="findById" resultType="User">
+    SELECT *
+    FROM user
+    WHERE id=#{id}
+  </select>
+  <!-- 通过username查找user -->
+  <!--<select id="findByUsername" parameterType="String" resultType="User">-->
+    <!--SELECT *-->
+    <!--FROM user-->
+    <!--WHERE username=#{username}-->
+  <!--</select>-->
+
+  <!-- 更新用户信息通过user -->
+  <!--<update id="update" parameterType="User" >-->
+    <!--UPDATE user-->
+    <!--SET-->
+    <!--username=#{username},-->
+    <!--password=#{password}-->
+    <!--WHERE-->
+    <!--id=#{id}-->
+  <!--</update>-->
+
+  <!-- 更新用户密码 -->
+  <!--<update id="updatePasswordById">-->
+    <!--UPDATE user-->
+    <!--SET-->
+    <!--password=#{password}-->
+    <!--WHERE-->
+    <!--id=#{id}-->
+  <!--</update>-->
+
+  <!-- 更新user登录信息 -->
+  <!--<update id="updateLoginInfo">-->
+    <!--UPDATE user-->
+    <!--SET-->
+    <!--login_ip=#{host},-->
+    <!--login_date=#{login_date}-->
+    <!--WHERE-->
+    <!--id=#{id}-->
+  <!--</update>-->
+
+</mapper>
