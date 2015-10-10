@@ -22,6 +22,7 @@
               </property>
               <property name="filterChainDefinitions">
                      <value>
+                         /** anon
                        /login.do = authc
                        /logout.do = logout
                        /assets/** = anon
@@ -55,7 +56,10 @@
        <bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
               <property name="cacheManager" ref="cacheManager"/>
        </bean>
-
+    <!-- 缓存配置 -->
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:${ehcache.configFile}" />
+    </bean>
        <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
        <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
 
@@ -67,5 +71,7 @@
        <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
               <property name="securityManager" ref="securityManager"/>
        </bean>
+
+    <bean id="userRealm" class="com.xyu.sys.shiro.UserRealm"></bean>
 
 </beans>
