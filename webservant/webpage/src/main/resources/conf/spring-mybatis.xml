@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
-http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-http://www.springframework.org/schema/tx
-http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
-http://www.springframework.org/schema/aop
-http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
-">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+  <!--引入jdbc配置文件-->
+  <context:property-placeholder location="classpath:conf/jdbc.properties"
+                                ignore-unresolvable="true"/>
     <!-- 配置数据源，使用的是alibaba的Druid(德鲁伊)数据源 -->
-    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-        <property name="url" value="${mysql.url}" />
-        <property name="username" value="${mysql.username}" />
-        <property name="password" value="${mysql.password}" />
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+      <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
         <!-- 初始化连接大小 -->
         <property name="initialSize" value="0" />
         <!-- 连接池最大使用连接数量 -->
@@ -26,7 +38,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
         <property name="poolPreparedStatements" value="true" />
         <property name="maxPoolPreparedStatementPerConnectionSize" value="33" />
         -->
-        <property name="validationQuery" value="${mysql.validationQuery}" />
+        <property name="validationQuery" value="${jdbc.validationQuery}" />
         <property name="testOnBorrow" value="false" />
         <property name="testOnReturn" value="false" />
         <property name="testWhileIdle" value="true" />
@@ -44,6 +56,22 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
         <!-- <property name="filters" value="stat" /> -->
         <property name="filters" value="mergeStat" />
     </bean>
+
+  <!-- mybatis文件配置,扫描所有mapper文件 -->
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+        p:dataSource-ref="dataSource" p:configLocation="classpath:conf/mybatis-config.xml"
+        p:mapperLocations="classpath:mapper/*.xml" />
+  <!-- mybatis文件配置,扫描所有mapper文件 -->
+  <!-- configLocation为mybatis属性 mapperLocations为所有mapper -->
+
+  <!-- spring与mybatis整合配置，扫描所有dao -->
+  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+        p:basePackage="com.xyu" p:sqlSessionFactoryBeanName="sqlSessionFactory" />
+
+  <!-- 对数据源进行事务管理 -->
+  <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+        p:dataSource-ref="dataSource" />
 
 
 </beans>
