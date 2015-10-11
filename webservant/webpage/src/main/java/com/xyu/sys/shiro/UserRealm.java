@@ -6,7 +6,7 @@ import com.xyu.sys.config.Global;
 import com.xyu.sys.user.bean.Permission;
 import com.xyu.sys.user.bean.Role;
 import com.xyu.sys.user.bean.User;
-import com.xyu.sys.user.service.UserService;
+import com.xyu.sys.user.service.IUserService;
 import com.xyu.sys.user.service.impl.UserServiceImpl;
 import com.xyu.sys.utils.UserUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -36,7 +36,7 @@ import java.util.List;
 public class UserRealm extends AuthorizingRealm{
 
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
     /**
      * 认证回调函数, 登录时调用
@@ -44,8 +44,7 @@ public class UserRealm extends AuthorizingRealm{
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
-            User user = userService.findByUsername(token.getUsername());
-        String pass=Encoder.encodeHex("123456".getBytes());
+        User user = userService.findByUsername(token.getUsername());
         if (user != null) {
                 byte[] salt = Encoder.decodeHex(user.getPassword().substring(0, 16));
                 return new SimpleAuthenticationInfo(new Principal(user),

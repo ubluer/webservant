@@ -1,5 +1,6 @@
 package com.xyu.sys.user.bean;
 
+import com.xyu.core.basebean.BaseBean;
 import com.xyu.core.basebean.BaseUuidBean;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  * Created by Administrator on 2015/10/5 0005.
  * @version 0.1.0
  */
-public class Role extends BaseUuidBean{
+public class Role extends BaseBean {
     /** 角色名 */
     private String name;
     /** 权限集 */

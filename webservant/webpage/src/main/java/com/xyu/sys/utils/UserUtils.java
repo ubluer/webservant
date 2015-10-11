@@ -30,7 +30,8 @@ public class UserUtils {
                 Subject subject = SecurityUtils.getSubject();
                 Principal principal = (Principal)subject.getPrincipal();
                 if (principal!=null){
-                    user = userDao.findById(principal.getId());
+//                    user = userDao.findById(principal.getId());
+                    user =new User();
                     putCache(CACHE_USER, user);
                 }
             }catch (UnavailableSecurityManagerException e) {

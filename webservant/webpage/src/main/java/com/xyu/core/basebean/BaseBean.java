@@ -9,11 +9,29 @@ package com.xyu.core.basebean;
  */
 public class BaseBean extends BaseUuidBean{
 
+    private Integer valid;
+    private Integer delFlag;
     private String createdDate;
     private String createdBy;
     private String updatedDate;
     private String updatedBy;
     private String note;
+
+    public Integer getValid() {
+        return valid;
+    }
+
+    public void setValid(Integer valid) {
+        this.valid = valid;
+    }
+
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
 
     public String getCreatedDate() {
         return createdDate;

@@ -1,6 +1,7 @@
 package com.xyu.sys.user.service;
 
-import com.xyu.core.baseservice.BaseService;
+
+import com.xyu.core.baseservice.IBaseService;
 import com.xyu.sys.user.bean.User;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +12,10 @@ import org.springframework.stereotype.Service;
  *
  * 用户基础业务接口
  */
-public interface UserService extends BaseService<User>{
+public interface IUserService extends IBaseService<User> {
 
     User findByUsername(String username);
 
+    String test();
 
 }

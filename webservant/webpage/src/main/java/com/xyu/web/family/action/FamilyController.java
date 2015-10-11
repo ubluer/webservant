@@ -1,6 +1,6 @@
 package com.xyu.web.family.action;
 
-import com.xyu.sys.user.service.UserService;
+import com.xyu.sys.user.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "family")
 public class FamilyController {
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
     @RequestMapping(value="index")
     public String index(){

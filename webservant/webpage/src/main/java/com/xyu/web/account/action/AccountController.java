@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Controller
 public class AccountController {
-    @RequestMapping(value = "index")
+    @RequestMapping(value = {"index",""})
     public String account(HttpServletRequest request,HttpServletResponse response){
         return "cover/cover-index";
     }
