@@ -7,6 +7,8 @@ import com.xyu.sys.user.bean.User;
 import com.xyu.sys.user.mapper.UserMapper;
 import com.xyu.sys.user.service.IUserService;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
+
 /**
  * @author Xiang.Yu
  * @version 0.0.1
@@ -21,6 +23,8 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
     }
 
     public User findByUsername(String username) {
-        return null;
+        User user = new User();
+        user.setUsername(username);
+        return this.selectOne(user);
     }
 }
