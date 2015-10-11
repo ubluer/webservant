@@ -1,13 +1,12 @@
 package com.xyu.sys.user.service.impl;
 
-import com.xyu.core.basedao.BaseDao;
 import com.xyu.core.baseservice.BaseServiceImpl;
+import com.xyu.core.ibatis.MybatisHelper;
 import com.xyu.sys.user.bean.User;
-import com.xyu.sys.user.dao.UserDao;
-import com.xyu.sys.user.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
+import com.xyu.sys.user.mapper.UserMapper;
+import com.xyu.sys.user.service.IUserService;
+import org.springframework.stereotype.Service;
 /**
  * @author Xiang.Yu
  * @version 0.0.1
@@ -16,19 +15,12 @@ import org.springframework.stereotype.Service;
 @Service("userService")
 public class UserServiceImpl extends BaseServiceImpl<User> implements IUserService {
 
-    @Autowired
-    private UserDao userDao;
-
     @Override
-    protected BaseDao<User> getDao() {
-        return userDao;
+    protected UserMapper getDao() {
+        return MybatisHelper.getSqlSession().getMapper(UserMapper.class);
     }
 
     public User findByUsername(String username) {
-        return userDao.findByUsername(username);
-    }
-
-    public String test(){
-        return "a";
+        return null;
     }
 }

@@ -1,9 +1,10 @@
 package com.xyu.core.baseservice;
 
 
-import com.xyu.core.basedao.BaseDao;
+import com.xyu.core.basedao.BaseMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  * @author Xiang.Yu
@@ -13,7 +14,7 @@ import org.slf4j.LoggerFactory;
 public abstract class BaseServiceImpl<T> implements IBaseService<T>{
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    abstract protected BaseDao<T> getDao();
+    abstract protected BaseMapper<T> getDao();
 
 //    public int update(T entity) {
 //        return getDao().update(entity);

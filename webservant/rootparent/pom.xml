@@ -29,12 +29,14 @@
     <slf4j.version>1.7.12</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
     <javax.version>3.1.0</javax.version>
+    <javax.persistence.version>1.0</javax.persistence.version>
     <jstl.version>1.2.1</jstl.version>
     <taglibs.version>1.2.5</taglibs.version>
     <commons-lang.version>3.4</commons-lang.version>
     <commons-io.version>2.4</commons-io.version>
     <commons-codec.version>1.10</commons-codec.version>
     <junit.version>4.12</junit.version>
+    <tk.mybatis.version>3.2.2</tk.mybatis.version>
   </properties>
 
   <dependencyManagement>
@@ -212,6 +214,12 @@
       <!-- EHCACHE end -->
       <!--工具类-->
       <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>${javax.persistence.version}</version>
+      </dependency>
+
+      <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-lang3</artifactId>
         <version>${commons-lang.version}</version>
@@ -231,6 +239,12 @@
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
         <scope>test</scope>
+      </dependency>
+      <!--通用Mybatise mapper项目-->
+      <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>mapper</artifactId>
+        <version>${tk.mybatis.version}</version>
       </dependency>
     </dependencies>
 

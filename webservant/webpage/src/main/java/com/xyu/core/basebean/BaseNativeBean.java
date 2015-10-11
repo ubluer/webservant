@@ -1,5 +1,10 @@
 package com.xyu.core.basebean;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author Xiang.Yu
  * Created by Xiang.Yu on 2015/10/5 0005.
@@ -11,6 +16,9 @@ public class BaseNativeBean extends BaseCoreBean{
     /**
      * 自增长id
      */
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     public Integer getId() {

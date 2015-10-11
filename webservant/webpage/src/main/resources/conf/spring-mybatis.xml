@@ -59,19 +59,28 @@
 
   <!-- mybatis文件配置,扫描所有mapper文件 -->
   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
-        p:dataSource-ref="dataSource" p:configLocation="classpath:conf/mybatis-config.xml"
-        p:mapperLocations="classpath:mapper/*.xml" />
+        p:dataSource-ref="dataSource"/>
   <!-- mybatis文件配置,扫描所有mapper文件 -->
   <!-- configLocation为mybatis属性 mapperLocations为所有mapper -->
 
   <!-- spring与mybatis整合配置，扫描所有dao -->
-  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-        p:basePackage="com.xyu" p:sqlSessionFactoryBeanName="sqlSessionFactory" />
+  <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"-->
+        <!--p:basePackage="com.xyu" p:sqlSessionFactoryBeanName="sqlSessionFactory" />-->
 
   <!-- 对数据源进行事务管理 -->
   <bean id="transactionManager"
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
         p:dataSource-ref="dataSource" />
 
+  <!-- 通用Mapper配置-->
+  <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+    <property name="basePackage" value="com.xyu.**.mapper"/>
+    <property name="properties">
+      <value>
+        mappers=tk.mybatis.mapper.common.Mapper
+        mappers=com.xyu.core.basedao.BaseMapper
+      </value>
+    </property>
+  </bean>
 
 </beans>

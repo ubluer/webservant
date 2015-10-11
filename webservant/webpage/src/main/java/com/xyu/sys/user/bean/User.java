@@ -2,19 +2,25 @@ package com.xyu.sys.user.bean;
 
 import com.xyu.core.basebean.BaseBean;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.util.List;
 
 /**
  * @author Xiang.Yu
  * Created by Xiang.Yu on 2015/10/5 0005.
- * @version 0.1.0
+ * @version 0.1.1
  *
  * 用于shiro的用户认证
  */
+@Table(name="sys_user")
 public class User extends BaseBean{
 
     private String username;
     private String password;
+    @Transient
     private List<Role> roleList;
 
     public String getUsername() {
@@ -32,6 +38,7 @@ public class User extends BaseBean{
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     public List<Role> getRoleList() {
         return roleList;

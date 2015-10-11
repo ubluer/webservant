@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping(value = "user")
 public class UserController {
-    private Logger logger= LoggerFactory.getLogger(UserController.class);
+    private static Logger logger= LoggerFactory.getLogger(UserController.class);
     @Autowired
     private IUserService userService;
     @RequestMapping("create-new")
@@ -33,8 +33,6 @@ public class UserController {
         String password="123456";
         String pass=Encoder.encodeHex("123456".getBytes());
         newUser.setPassword(pass);
-        logger.error(userService.test());
-        logger.info(userService.test());
         userService.insert(newUser);
         return "a";
     }

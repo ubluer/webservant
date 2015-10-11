@@ -15,7 +15,4 @@ import org.springframework.stereotype.Service;
 public interface IUserService extends IBaseService<User> {
 
     User findByUsername(String username);
-
-    String test();
-
 }
