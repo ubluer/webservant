@@ -59,7 +59,17 @@
 
   <!-- mybatis文件配置,扫描所有mapper文件 -->
   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
-        p:dataSource-ref="dataSource"/>
+        p:dataSource-ref="dataSource">
+    <property name="plugins">
+      <array>
+        <bean class="com.github.pagehelper.PageHelper">
+          <property name="properties">
+            <value>hsqldb</value>
+          </property>
+        </bean>
+      </array>
+    </property>
+  </bean>
   <!-- mybatis文件配置,扫描所有mapper文件 -->
   <!-- configLocation为mybatis属性 mapperLocations为所有mapper -->
 

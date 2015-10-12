@@ -44,11 +44,11 @@ public class UserRealm extends AuthorizingRealm{
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
+        String passw=UserUtils.encodePassword(token.getPassword());
         User user = userService.findByUsername(token.getUsername());
         if (user != null) {
-                byte[] salt = Encoder.decodeHex(user.getPassword().substring(0, 16));
                 return new SimpleAuthenticationInfo(new Principal(user),
-                        user.getPassword().substring(16), ByteSource.Util.bytes(salt), getName());
+                        user.getPassword(), ByteSource.Util.bytes(Global.SALT_PUB_STR), getName());
             } else {
                 return null;
             }

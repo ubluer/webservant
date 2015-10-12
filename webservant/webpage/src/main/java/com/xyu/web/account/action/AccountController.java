@@ -55,7 +55,7 @@ public class AccountController {
         }
 //        model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, username);
 //        model.addAttribute("isValidateCodeLogin", isValidateCodeLogin(username, true, false));
-        return "login";
+        return "redirect:"+"cover/index.do";
     }
     /**
      * 登录成功，进入管理首页

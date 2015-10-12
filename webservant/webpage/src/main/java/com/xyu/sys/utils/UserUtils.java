@@ -1,13 +1,20 @@
 package com.xyu.sys.utils;
 
+import com.xyu.common.utlis.Encoder;
+import com.xyu.core.ibatis.MybatisHelper;
 import com.xyu.core.spring.SpringContextHolder;
+import com.xyu.sys.config.Global;
 import com.xyu.sys.shiro.Principal;
 import com.xyu.sys.user.bean.User;
 import com.xyu.sys.user.dao.UserDao;
+import com.xyu.sys.user.mapper.UserMapper;
+import com.xyu.sys.user.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.session.InvalidSessionException;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
 
 
 import java.util.HashMap;
@@ -19,7 +26,7 @@ import java.util.Map;
  * @date 2015/10/6 0006
  */
 public class UserUtils {
-    private static UserDao userDao = SpringContextHolder.getBean(UserDao.class);
+    private static IUserService userService = SpringContextHolder.getBean("userService");
 
     public static final String CACHE_USER = "user";
 
@@ -30,7 +37,7 @@ public class UserUtils {
                 Subject subject = SecurityUtils.getSubject();
                 Principal principal = (Principal)subject.getPrincipal();
                 if (principal!=null){
-//                    user = userDao.findById(principal.getId());
+                    user = userService.selectByKey(principal.getId());
                     user =new User();
                     putCache(CACHE_USER, user);
                 }
@@ -90,5 +97,31 @@ public class UserUtils {
 
         }
         return map;
+    }
+
+    /**
+     * 用户密码加密
+     * @param password 用户密码
+     * @return 加密后字符串
+     */
+    public static String encodePassword(String password){
+        String secret = new SimpleHash(
+                Global.HASH_ALGORITHM,
+                password,
+                ByteSource.Util.bytes(Global.SALT_PUB_STR),
+                Global.HASH_INTERATIONS).toHex();
+//        String secret = Encoder.encodeHex(password.getBytes());
+//        secret = Encoder.encodeBase62(secret.getBytes());
+//        secret = Encoder.encodeHex(secret.getBytes());
+        return secret;
+    }
+    /**
+     * 用户密码加密
+     * @param password 用户密码
+     * @return 加密后字符串
+     */
+    public static String encodePassword(char[] password){
+        String secret = String.valueOf(password);
+        return encodePassword(secret);
     }
 }

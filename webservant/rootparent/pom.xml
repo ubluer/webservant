@@ -37,6 +37,7 @@
     <commons-codec.version>1.10</commons-codec.version>
     <junit.version>4.12</junit.version>
     <tk.mybatis.version>3.2.2</tk.mybatis.version>
+    <tk.mybatis.pagehelper.version>4.0.1</tk.mybatis.pagehelper.version>
   </properties>
 
   <dependencyManagement>
@@ -245,6 +246,11 @@
         <groupId>tk.mybatis</groupId>
         <artifactId>mapper</artifactId>
         <version>${tk.mybatis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>${tk.mybatis.pagehelper.version}</version>
       </dependency>
     </dependencies>
 
