@@ -1,8 +1,6 @@
-package com.xyu.sys.user.bean;
+package com.xyu.module.sys.user.bean;
 
 import com.xyu.core.basebean.BaseBean;
-import com.xyu.core.basebean.BaseUuidBean;
-import com.xyu.sys.config.ConstantEnum;
 
 /**
  * Created by Xiang on 2015/10/11.

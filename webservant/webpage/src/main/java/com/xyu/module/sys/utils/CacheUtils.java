@@ -1,4 +1,4 @@
-package com.xyu.sys.utils;
+package com.xyu.module.sys.utils;
 
 import com.xyu.core.spring.SpringContextHolder;
 import net.sf.ehcache.Cache;

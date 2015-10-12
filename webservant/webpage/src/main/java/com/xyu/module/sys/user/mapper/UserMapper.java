@@ -1,8 +1,7 @@
-package com.xyu.sys.user.mapper;
+package com.xyu.module.sys.user.mapper;
 
 import com.xyu.core.basedao.BaseMapper;
-import com.xyu.sys.user.bean.User;
-import tk.mybatis.mapper.common.Mapper;
+import com.xyu.module.sys.user.bean.User;
 
 /**
  * @author Xiang.Yu

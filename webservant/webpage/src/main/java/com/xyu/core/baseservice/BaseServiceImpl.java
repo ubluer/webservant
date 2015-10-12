@@ -3,15 +3,12 @@ package com.xyu.core.baseservice;
 
 import com.xyu.common.utlis.ReflectionHelper;
 import com.xyu.core.basedao.BaseMapper;
-import com.xyu.sys.config.ConstantEnum;
-import org.apache.ibatis.annotations.Param;
+import com.xyu.module.sys.config.ConstantEnum;
 import org.apache.ibatis.session.RowBounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author Xiang.Yu

@@ -1,4 +1,4 @@
-package com.xyu.sys.user.bean;
+package com.xyu.module.sys.user.bean;
 
 import com.xyu.core.basebean.BaseBean;
 

@@ -1,9 +1,7 @@
-package com.xyu.sys.user.bean;
+package com.xyu.module.sys.user.bean;
 
 import com.xyu.core.basebean.BaseBean;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.util.List;

@@ -1,14 +1,10 @@
-package com.xyu.sys.utils;
+package com.xyu.module.sys.utils;
 
-import com.xyu.common.utlis.Encoder;
-import com.xyu.core.ibatis.MybatisHelper;
 import com.xyu.core.spring.SpringContextHolder;
-import com.xyu.sys.config.Global;
-import com.xyu.sys.shiro.Principal;
-import com.xyu.sys.user.bean.User;
-import com.xyu.sys.user.dao.UserDao;
-import com.xyu.sys.user.mapper.UserMapper;
-import com.xyu.sys.user.service.IUserService;
+import com.xyu.module.sys.config.Global;
+import com.xyu.module.sys.shiro.Principal;
+import com.xyu.module.sys.user.bean.User;
+import com.xyu.module.sys.user.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
 import org.apache.shiro.crypto.hash.SimpleHash;

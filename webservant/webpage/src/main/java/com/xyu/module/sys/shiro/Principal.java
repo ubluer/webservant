@@ -1,6 +1,6 @@
-package com.xyu.sys.shiro;
+package com.xyu.module.sys.shiro;
 
-import com.xyu.sys.user.bean.User;
+import com.xyu.module.sys.user.bean.User;
 
 import java.util.HashMap;
 import java.util.Map;

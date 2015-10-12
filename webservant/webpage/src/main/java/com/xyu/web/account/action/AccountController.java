@@ -1,10 +1,10 @@
 package com.xyu.web.account.action;
 
-import com.xyu.sys.config.Global;
-import com.xyu.sys.user.bean.User;
-import com.xyu.sys.utils.CacheUtils;
+import com.xyu.module.sys.config.Global;
+import com.xyu.module.sys.user.bean.User;
+import com.xyu.module.sys.utils.CacheUtils;
 import com.xyu.common.utlis.CookieUtils;
-import com.xyu.sys.utils.UserUtils;
+import com.xyu.module.sys.utils.UserUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
@@ -31,6 +31,7 @@ public class AccountController {
     public String account(HttpServletRequest request,HttpServletResponse response){
         return "cover/cover-index";
     }
+
     /**
      * 跳转至登录页面
      */
@@ -55,7 +56,7 @@ public class AccountController {
         }
 //        model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, username);
 //        model.addAttribute("isValidateCodeLogin", isValidateCodeLogin(username, true, false));
-        return "redirect:"+"cover/index.do";
+        return "redirect:"+"login.do";
     }
     /**
      * 登录成功，进入管理首页

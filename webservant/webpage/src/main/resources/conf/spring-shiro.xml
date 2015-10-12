@@ -33,7 +33,7 @@
               </property>
        </bean>
   <bean id="formAuthenticationFilter"
-        class="com.xyu.sys.shiro.FormAuthenticationFilter"/>
+        class="com.xyu.module.sys.shiro.FormAuthenticationFilter"/>
 
   <!-- 定义 Shiro 主要业务对象 -->
        <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
@@ -72,6 +72,6 @@
               <property name="securityManager" ref="securityManager"/>
        </bean>
 
-    <bean id="userRealm" class="com.xyu.sys.shiro.UserRealm"></bean>
+    <bean id="userRealm" class="com.xyu.module.sys.shiro.UserRealm"></bean>
 
 </beans>

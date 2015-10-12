@@ -1,13 +1,12 @@
-package com.xyu.sys.user.service.impl;
+package com.xyu.module.sys.user.service.impl;
 
 import com.xyu.core.baseservice.BaseServiceImpl;
 import com.xyu.core.ibatis.MybatisHelper;
-import com.xyu.sys.user.bean.User;
+import com.xyu.module.sys.user.bean.User;
 
-import com.xyu.sys.user.mapper.UserMapper;
-import com.xyu.sys.user.service.IUserService;
+import com.xyu.module.sys.user.mapper.UserMapper;
+import com.xyu.module.sys.user.service.IUserService;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
 /**
  * @author Xiang.Yu

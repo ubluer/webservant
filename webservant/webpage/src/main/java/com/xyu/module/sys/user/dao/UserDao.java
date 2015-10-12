@@ -1,7 +1,7 @@
-package com.xyu.sys.user.dao;
+package com.xyu.module.sys.user.dao;
 
 import com.xyu.core.basedao.BaseDao;
-import com.xyu.sys.user.bean.User;
+import com.xyu.module.sys.user.bean.User;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 

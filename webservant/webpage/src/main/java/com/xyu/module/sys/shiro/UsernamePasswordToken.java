@@ -1,4 +1,4 @@
-package com.xyu.sys.shiro;
+package com.xyu.module.sys.shiro;
 
 /**
  * @author Xiang.Yu

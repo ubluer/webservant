@@ -1,9 +1,8 @@
-package com.xyu.sys.user.service;
+package com.xyu.module.sys.user.service;
 
 
 import com.xyu.core.baseservice.IBaseService;
-import com.xyu.sys.user.bean.User;
-import org.springframework.stereotype.Service;
+import com.xyu.module.sys.user.bean.User;
 
 /**
  * @author Xiang.Yu

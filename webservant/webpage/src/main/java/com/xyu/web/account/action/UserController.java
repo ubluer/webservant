@@ -1,10 +1,8 @@
 package com.xyu.web.account.action;
 
 import com.xyu.common.utlis.Encoder;
-import com.xyu.common.utlis.StringUtils;
-import com.xyu.sys.user.bean.User;
-import com.xyu.sys.user.service.IUserService;
-import com.xyu.sys.user.service.impl.UserServiceImpl;
+import com.xyu.module.sys.user.bean.User;
+import com.xyu.module.sys.user.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

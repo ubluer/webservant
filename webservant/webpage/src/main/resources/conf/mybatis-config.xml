@@ -5,13 +5,13 @@
 <configuration>
   <!-- 实体重命名 -->
   <typeAliases>
-    <package name="com.xyu.sys.user.bean"/>
+    <package name="com.xyu.module.sys.user.bean"/>
   </typeAliases>
 
 
   <!-- 映射map -->
   <mappers>
-    <package name="com.xyu.sys.user.dao"></package>
+    <package name="com.xyu.module.sys.user.dao"></package>
   </mappers>
 
 </configuration>

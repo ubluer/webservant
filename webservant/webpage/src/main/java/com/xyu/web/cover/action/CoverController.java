@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "cover")
 public class CoverController {
 
-    @RequestMapping(value="index")
+    @RequestMapping(value={"index",""})
     public String index(){
         return "cover/cover-index";
     }

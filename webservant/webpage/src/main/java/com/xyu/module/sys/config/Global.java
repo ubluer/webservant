@@ -1,4 +1,4 @@
-package com.xyu.sys.config;
+package com.xyu.module.sys.config;
 
 import com.xyu.common.utlis.PropertiesLoader;
 import org.springframework.util.Assert;

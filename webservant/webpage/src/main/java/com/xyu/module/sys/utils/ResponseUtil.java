@@ -1,4 +1,4 @@
-package com.xyu.sys.utils;
+package com.xyu.module.sys.utils;
 
 /**
  * @author Xiang.Yu

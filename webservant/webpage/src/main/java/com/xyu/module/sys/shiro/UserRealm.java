@@ -1,15 +1,9 @@
-package com.xyu.sys.shiro;
+package com.xyu.module.sys.shiro;
 
-import com.xyu.common.utlis.Encoder;
-import com.xyu.core.spring.SpringContextHolder;
-import com.xyu.sys.config.Global;
-import com.xyu.sys.user.bean.Permission;
-import com.xyu.sys.user.bean.Role;
-import com.xyu.sys.user.bean.User;
-import com.xyu.sys.user.service.IUserService;
-import com.xyu.sys.user.service.impl.UserServiceImpl;
-import com.xyu.sys.utils.UserUtils;
-import org.apache.commons.lang3.StringUtils;
+import com.xyu.module.sys.config.Global;
+import com.xyu.module.sys.user.bean.User;
+import com.xyu.module.sys.user.service.IUserService;
+import com.xyu.module.sys.utils.UserUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -23,9 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Xiang.Yu

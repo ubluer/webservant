@@ -1,4 +1,4 @@
-package com.xyu.sys.config;
+package com.xyu.module.sys.config;
 
 /**
  * Created by Xiang on 2015/10/11.

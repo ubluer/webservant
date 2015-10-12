@@ -18,6 +18,7 @@
         <li class="active"><a href="${ctx}/cover/index.do">Cover</a></li>
         <li><a href="${ctx}/family/index.do">Family</a></li>
         <li><a href="${ctx}/resume/index.do">Resume</a></li>
+        <li><a href="${ctx}/system/index.do">Resume</a></li>
       </ul>
     </nav>
   </div>

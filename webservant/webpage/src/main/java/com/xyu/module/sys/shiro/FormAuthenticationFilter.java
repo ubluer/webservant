@@ -1,6 +1,6 @@
-package com.xyu.sys.shiro;
+package com.xyu.module.sys.shiro;
 
-import com.xyu.sys.config.Global;
+import com.xyu.module.sys.config.Global;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.stereotype.Service;
