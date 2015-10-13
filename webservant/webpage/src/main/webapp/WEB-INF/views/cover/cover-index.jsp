@@ -24,7 +24,7 @@
                     <h3 class="login-txt">Good Morning</h3><strong>xiang.yu</strong>
 
                     <div class="check-button">CHECK</div>
-                    <img src="${ctx}/assets/res/image/home-banner.jpg">;
+                    <img src="${ctx}/assets/res/img/home-banner.jpg">
                 </div>
             </div>
         </div>
@@ -34,10 +34,7 @@
 
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="${ctx}/assets/plugin/jquery/jquery-1.11.3.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="${ctx}/assets/plugin/bootstrap/js/bootstrap.js"></script>
+
 </body>
 
 
