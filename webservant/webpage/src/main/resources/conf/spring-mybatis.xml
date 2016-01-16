@@ -88,7 +88,7 @@
     <property name="properties">
       <value>
         mappers=tk.mybatis.mapper.common.Mapper
-        mappers=com.xyu.core.basedao.BaseMapper
+        mappers=com.xyu.foundation.baseclass.BaseMapper
       </value>
     </property>
   </bean>

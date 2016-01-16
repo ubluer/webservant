@@ -72,6 +72,6 @@
               <property name="securityManager" ref="securityManager"/>
        </bean>
 
-    <bean id="userRealm" class="com.xyu.module.sys.shiro.UserRealm"></bean>
+    <bean id="userRealm" class="com.xyu.module.sys.shiro.UserRealm"/>
 
 </beans>

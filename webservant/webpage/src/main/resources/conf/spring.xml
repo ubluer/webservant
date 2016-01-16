@@ -17,7 +17,8 @@
     <context:component-scan base-package="com.xyu">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
-    <bean id="contextHolder" class="com.xyu.core.spring.SpringContextHolder" lazy-init="false"></bean>
+
+    <bean id="contextHolder" class="com.xyu.core.spring.SpringContextHolder" lazy-init="false"/>
   <!-- 缓存配置 -->
   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
     <property name="configLocation" value="classpath:${ehcache.configFile}" />

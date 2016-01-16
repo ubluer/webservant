@@ -3,7 +3,7 @@ package com.xyu.module.sys.shiro;
 import com.xyu.module.sys.config.Global;
 import com.xyu.module.sys.user.bean.User;
 import com.xyu.module.sys.user.service.IUserService;
-import com.xyu.module.sys.utils.UserUtils;
+import com.xyu.foundation.utils.UserUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -35,7 +35,6 @@ public class UserRealm extends AuthorizingRealm{
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
-        String passw=UserUtils.encodePassword(token.getPassword());
         User user = userService.findByUsername(token.getUsername());
         if (user != null) {
                 return new SimpleAuthenticationInfo(new Principal(user),

@@ -1,6 +1,6 @@
 package com.xyu.module.sys.user.mapper;
 
-import com.xyu.core.basedao.BaseMapper;
+import com.xyu.foundation.baseclass.BaseMapper;
 import com.xyu.module.sys.user.bean.User;
 
 /**

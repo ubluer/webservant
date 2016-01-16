@@ -18,7 +18,6 @@ public interface IBaseService<T> {
     public int updateSelective(T entity);
 
     public int insert(T entity);
-
     public int insertSelective(T entity);
 
     public int deleteByKey(Integer key);
@@ -29,5 +28,12 @@ public interface IBaseService<T> {
      * @param entity 删除匹配的实体
      * @return 删除的条数
      */
-    public int deleteLogic(T entity);
+    int deleteLogic(T entity);
+
+    /**存储实体，插入或更新*/
+    int save(T entity);
+    int saveSelective(T entity);
+
+    /**判断是否是插入*/
+     boolean isNew(T entity);
 }

@@ -1,5 +1,7 @@
 package com.xyu.core.basebean;
 
+import com.xyu.common.utlis.UIDGenerator;
+
 /**
  * @author Xiang.Yu
  * Created by Administrator on 2015/10/5 0005.

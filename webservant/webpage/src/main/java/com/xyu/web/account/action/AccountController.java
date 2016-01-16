@@ -2,9 +2,9 @@ package com.xyu.web.account.action;
 
 import com.xyu.module.sys.config.Global;
 import com.xyu.module.sys.user.bean.User;
-import com.xyu.module.sys.utils.CacheUtils;
+import com.xyu.foundation.utils.CacheUtils;
 import com.xyu.common.utlis.CookieUtils;
-import com.xyu.module.sys.utils.UserUtils;
+import com.xyu.foundation.utils.UserUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
@@ -54,8 +54,8 @@ public class AccountController {
         if(user.getId() != null){
             return "redirect:"+ "cover/index.do";
         }
-//        model.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, username);
-//        model.addAttribute("isValidateCodeLogin", isValidateCodeLogin(username, true, false));
+//        vo.addAttribute(FormAuthenticationFilter.DEFAULT_USERNAME_PARAM, username);
+//        vo.addAttribute("isValidateCodeLogin", isValidateCodeLogin(username, true, false));
         return "redirect:"+"login.do";
     }
     /**

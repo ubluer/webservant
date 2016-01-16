@@ -1,6 +1,6 @@
 package com.xyu.module.sys.user.service.impl;
 
-import com.xyu.core.baseservice.BaseServiceImpl;
+import com.xyu.foundation.baseclass.BaseServiceImpl;
 import com.xyu.core.ibatis.MybatisHelper;
 import com.xyu.module.sys.user.bean.User;
 

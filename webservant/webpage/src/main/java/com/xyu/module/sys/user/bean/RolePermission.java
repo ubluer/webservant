@@ -1,6 +1,6 @@
 package com.xyu.module.sys.user.bean;
 
-import com.xyu.core.basebean.BaseBean;
+import com.xyu.foundation.baseclass.BaseBean;
 
 /**
  * Created by Xiang on 2015/10/11.

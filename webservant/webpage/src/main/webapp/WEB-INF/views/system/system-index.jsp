@@ -13,1942 +13,1496 @@
   <meta charset="utf-8" />
   <title>XYU管理</title>
 
-  <meta name="description" content="Dashboard" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <%@include file="/WEB-INF/views/common/_include.jsp"%>
   <%@include file="/WEB-INF/views/system/include/_include-admin.jsp"%>
 </head>
 <!-- /Head -->
-<!-- Body -->
 <body>
-<!-- Loading Container -->
-<div class="loading-container">
-  <div class="loading-progress">
-    <div class="rotator">
-      <div class="rotator">
-        <div class="rotator colored">
-          <div class="rotator">
-            <div class="rotator colored">
-              <div class="rotator colored"></div>
-              <div class="rotator"></div>
-            </div>
-            <div class="rotator colored"></div>
-          </div>
-          <div class="rotator"></div>
-        </div>
-        <div class="rotator"></div>
-      </div>
-      <div class="rotator"></div>
-    </div>
-    <div class="rotator"></div>
-  </div>
-</div>
-<!--  /Loading Container -->
-<!-- Navbar -->
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="navbar-container">
-      <!-- Navbar Barnd -->
-      <div class="navbar-header pull-left">
-        <a href="#" class="navbar-brand">
-          <small>
-            <img src="${ctx}/assets/plugin/beyond/img/logo.png" alt="" />
-          </small>
-        </a>
-      </div>
-      <!-- /Navbar Barnd -->
+<%@include file="/WEB-INF/views/system/include/_header.jsp" %>
+<div class="main-container" id="main-container">
+  <script type="text/javascript">
+    try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+  </script>
 
-      <!-- Sidebar Collapse -->
-      <div class="sidebar-collapse" id="sidebar-collapse">
-        <i class="collapse-icon fa fa-bars"></i>
-      </div>
-      <!-- /Sidebar Collapse -->
-      <!-- Account Area and Settings --->
-      <div class="navbar-header pull-right">
-        <div class="navbar-account">
-          <ul class="account-area">
-            <li>
-              <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
-                <i class="icon fa fa-warning"></i>
-              </a>
-              <!--Notification Dropdown-->
-              <ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <div class="notification-icon">
-                        <i class="fa fa-phone bg-themeprimary white"></i>
-                      </div>
-                      <div class="notification-body">
-                        <span class="title">Skype meeting with Patty</span>
-                        <span class="description">01:00 pm</span>
-                      </div>
-                      <div class="notification-extra">
-                        <i class="fa fa-clock-o themeprimary"></i>
-                        <span class="description">office</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <div class="notification-icon">
-                        <i class="fa fa-check bg-darkorange white"></i>
-                      </div>
-                      <div class="notification-body">
-                        <span class="title">Uncharted break</span>
-                        <span class="description">03:30 pm - 05:15 pm</span>
-                      </div>
-                      <div class="notification-extra">
-                        <i class="fa fa-clock-o darkorange"></i>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <div class="notification-icon">
-                        <i class="fa fa-gift bg-warning white"></i>
-                      </div>
-                      <div class="notification-body">
-                        <span class="title">Kate birthday party</span>
-                        <span class="description">08:30 pm</span>
-                      </div>
-                      <div class="notification-extra">
-                        <i class="fa fa-calendar warning"></i>
-                        <i class="fa fa-clock-o warning"></i>
-                        <span class="description">at home</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <div class="notification-icon">
-                        <i class="fa fa-glass bg-success white"></i>
-                      </div>
-                      <div class="notification-body">
-                        <span class="title">Dinner with friends</span>
-                        <span class="description">10:30 pm</span>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="dropdown-footer ">
-                                        <span>
-                                            Today, March 28
-                                        </span>
-                                        <span class="pull-right">
-                                            10掳c
-                                            <i class="wi wi-cloudy"></i>
-                                        </span>
-                </li>
-              </ul>
-              <!--/Notification Dropdown-->
-            </li>
-            <li>
-              <a class="wave in dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
-                <i class="icon fa fa-envelope"></i>
-                <span class="badge">3</span>
-              </a>
-              <!--Messages Dropdown-->
-              <ul class="pull-right dropdown-menu dropdown-arrow dropdown-messages">
-                <li>
-                  <a href="#">
-                    <img src="assets/img/avatars/divyia.jpg" class="message-avatar" alt="Divyia Austin">
-                    <div class="message">
-                                                <span class="message-sender">
-                                                    Divyia Austin
-                                                </span>
-                                                <span class="message-time">
-                                                    2 minutes ago
-                                                </span>
-                                                <span class="message-subject">
-                                                    Here's the recipe for apple pie
-                                                </span>
-                                                <span class="message-body">
-                                                    to identify the sending application when the senders image is shown for the main icon
-                                                </span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/img/avatars/bing.png" class="message-avatar" alt="Microsoft Bing">
-                    <div class="message">
-                                                <span class="message-sender">
-                                                    Bing.com
-                                                </span>
-                                                <span class="message-time">
-                                                    Yesterday
-                                                </span>
-                                                <span class="message-subject">
-                                                    Bing Newsletter: The January Issue鈥�
-                                                </span>
-                                                <span class="message-body">
-                                                    Discover new music just in time for the Grammy庐 Awards.
-                                                </span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/img/avatars/adam-jansen.jpg" class="message-avatar" alt="Divyia Austin">
-                    <div class="message">
-                                                <span class="message-sender">
-                                                    Nicolas
-                                                </span>
-                                                <span class="message-time">
-                                                    Friday, September 22
-                                                </span>
-                                                <span class="message-subject">
-                                                    New 4K Cameras
-                                                </span>
-                                                <span class="message-body">
-                                                    The 4K revolution has come over the horizon and is reaching the general populous
-                                                </span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <!--/Messages Dropdown-->
-            </li>
+  <div class="main-container-inner">
+    <a class="menu-toggler" id="menu-toggler" href="#">
+      <span class="menu-text"></span>
+    </a>
+    
+    <%@include file="include/_sidebar.jsp"%>
 
-            <li>
-              <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
-                <i class="icon fa fa-tasks"></i>
-                <span class="badge">4</span>
-              </a>
-              <!--Tasks Dropdown-->
-              <ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow ">
-                <li class="dropdown-header bordered-darkorange">
-                  <i class="fa fa-tasks"></i>
-                  4 Tasks In Progress
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Account Creation</span>
-                      <span class="pull-right">65%</span>
-                    </div>
+    <div class="main-content">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+          try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+        </script>
 
-                    <div class="progress progress-xs">
-                      <div style="width:65%" class="progress-bar"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Profile Data</span>
-                      <span class="pull-right">35%</span>
-                    </div>
-
-                    <div class="progress progress-xs">
-                      <div style="width:35%" class="progress-bar progress-bar-success"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Updating Resume</span>
-                      <span class="pull-right">75%</span>
-                    </div>
-
-                    <div class="progress progress-xs">
-                      <div style="width:75%" class="progress-bar progress-bar-darkorange"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="clearfix">
-                      <span class="pull-left">Adding Contacts</span>
-                      <span class="pull-right">10%</span>
-                    </div>
-
-                    <div class="progress progress-xs">
-                      <div style="width:10%" class="progress-bar progress-bar-warning"></div>
-                    </div>
-                  </a>
-                </li>
-                <li class="dropdown-footer">
-                  <a href="#">
-                    See All Tasks
-                  </a>
-                  <button class="btn btn-xs btn-default shiny darkorange icon-only pull-right"><i class="fa fa-check"></i></button>
-                </li>
-              </ul>
-              <!--/Tasks Dropdown-->
-            </li>
-            <li>
-              <a class="login-area dropdown-toggle" data-toggle="dropdown">
-                <div class="avatar" title="View your public profile">
-                  <img src="${ctx}/assets/plugin/beyond/img/avatars/adam-jansen.jpg">
-                </div>
-                <section>
-                  <h2><span class="profile"><span>David Stevenson</span></span></h2>
-                </section>
-              </a>
-              <!--Login Area Dropdown-->
-              <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                <li class="username"><a>David Stevenson</a></li>
-                <li class="email"><a>David.Stevenson@live.com</a></li>
-                <!--Avatar Area-->
-                <li>
-                  <div class="avatar-area">
-                    <img src="${ctx}/assets/plugin/beyond/img/avatars/adam-jansen.jpg" class="avatar">
-                    <span class="caption">Change Photo</span>
-                  </div>
-                </li>
-                <!--Avatar Area-->
-                <li class="edit">
-                  <a href="profile.html" class="pull-left">Profile</a>
-                  <a href="#" class="pull-right">Setting</a>
-                </li>
-                <!--Theme Selector Area-->
-                <li class="theme-area">
-                  <ul class="colorpicker" id="skin-changer">
-                    <li><a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="assets/css/skins/blue.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="assets/css/skins/azure.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="assets/css/skins/teal.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="assets/css/skins/green.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="assets/css/skins/orange.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="assets/css/skins/pink.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="assets/css/skins/darkred.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="assets/css/skins/purple.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="assets/css/skins/darkblue.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#585858;" rel="assets/css/skins/gray.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#474544;" rel="assets/css/skins/black.min.css"></a></li>
-                    <li><a class="colorpick-btn" href="#" style="background-color:#001940;" rel="assets/css/skins/deepblue.min.css"></a></li>
-                  </ul>
-                </li>
-                <!--/Theme Selector Area-->
-                <li class="dropdown-footer">
-                  <a href="login.html">
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-              <!--/Login Area Dropdown-->
-            </li>
-            <!-- /Account Area -->
-            <!--Note: notice that setting div must start right after account area list.
-            no space must be between these elements-->
-            <!-- Settings -->
-          </ul><div class="setting">
-          <a id="btn-setting" title="Setting" href="#">
-            <i class="icon glyphicon glyphicon-cog"></i>
-          </a>
-        </div><div class="setting-container">
-          <label>
-            <input type="checkbox" id="checkbox_fixednavbar">
-            <span class="text">Fixed Navbar</span>
-          </label>
-          <label>
-            <input type="checkbox" id="checkbox_fixedsidebar">
-            <span class="text">Fixed SideBar</span>
-          </label>
-          <label>
-            <input type="checkbox" id="checkbox_fixedbreadcrumbs">
-            <span class="text">Fixed BreadCrumbs</span>
-          </label>
-          <label>
-            <input type="checkbox" id="checkbox_fixedheader">
-            <span class="text">Fixed Header</span>
-          </label>
-        </div>
-          <!-- Settings -->
-        </div>
-      </div>
-      <!-- /Account Area and Settings -->
-    </div>
-  </div>
-</div>
-<!-- /Navbar -->
-<!-- Main Container -->
-<div class="main-container container-fluid">
-  <!-- Page Container -->
-  <div class="page-container">
-    <!-- Page Sidebar -->
-    <div class="page-sidebar" id="sidebar">
-      <!-- Page Sidebar Header-->
-      <div class="sidebar-header-wrapper">
-        <input type="text" class="searchinput" />
-        <i class="searchicon fa fa-search"></i>
-        <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
-      </div>
-      <!-- /Page Sidebar Header -->
-      <!-- Sidebar Menu -->
-      <ul class="nav sidebar-menu">
-        <!--Dashboard-->
-        <li class="active">
-          <a href="index.html">
-            <i class="menu-icon glyphicon glyphicon-home"></i>
-            <span class="menu-text"> Dashboard </span>
-          </a>
-        </li>
-        <!--Databoxes-->
-        <li>
-          <a href="databoxes.html">
-            <i class="menu-icon glyphicon glyphicon-tasks"></i>
-            <span class="menu-text"> Data Boxes </span>
-          </a>
-        </li>
-        <!--Widgets-->
-        <li>
-          <a href="widgets.html">
-            <i class="menu-icon fa fa-th"></i>
-            <span class="menu-text"> Widgets </span>
-          </a>
-        </li>
-        <!--UI Elements-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-desktop"></i>
-            <span class="menu-text"> Elements </span>
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="elements.html">
-                <span class="menu-text">Basic Elements</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="menu-dropdown">
-                                    <span class="menu-text">
-                                        Icons
-                                    </span>
-                <i class="menu-expand"></i>
-              </a>
-
-              <ul class="submenu">
-                <li>
-                  <a href="font-awesome.html">
-                    <i class="menu-icon fa fa-rocket"></i>
-                    <span class="menu-text">Font Awesome</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="glyph-icons.html">
-                    <i class="menu-icon glyphicon glyphicon-stats"></i>
-                    <span class="menu-text">Glyph Icons</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="typicon.html">
-                    <i class="menu-icon typcn typcn-location-outline"></i>
-                    <span class="menu-text"> Typicons</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="weather-icons.html">
-                    <i class="menu-icon wi-day-snow"></i>
-                    <span class="menu-text">Weather Icons</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tabs.html">
-                <span class="menu-text">Tabs & Accordions</span>
-              </a>
-            </li>
-            <li>
-              <a href="alerts.html">
-                <span class="menu-text">Alerts & Tooltips</span>
-              </a>
-            </li>
-            <li>
-              <a href="modals.html">
-                <span class="menu-text">Modals & Wells</span>
-              </a>
-            </li>
-            <li>
-              <a href="buttons.html">
-                <span class="menu-text">Buttons</span>
-              </a>
-            </li>
-            <li>
-              <a href="nestable-list.html">
-                <span class="menu-text"> Nestable List</span>
-              </a>
-            </li>
-            <li>
-              <a href="treeview.html">
-                <span class="menu-text">Treeview</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--Tables-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-table"></i>
-            <span class="menu-text"> Tables </span>
-
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="tables-simple.html">
-                <span class="menu-text">Simple & Responsive</span>
-              </a>
-            </li>
-            <li>
-              <a href="tables-data.html">
-                <span class="menu-text">Data Tables</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--Forms-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-pencil-square-o"></i>
-            <span class="menu-text"> Forms </span>
-
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="form-layouts.html">
-                <span class="menu-text">Form Layouts</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="form-inputs.html">
-                <span class="menu-text">Form Inputs</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="form-pickers.html">
-                <span class="menu-text">Data Pickers</span>
-              </a>
-            </li>
-            <li>
-              <a href="form-wizard.html">
-                <span class="menu-text">Wizard</span>
-              </a>
-            </li>
-            <li>
-              <a href="form-validation.html">
-                <span class="menu-text">Validation</span>
-              </a>
-            </li>
-            <li>
-              <a href="form-editors.html">
-                <span class="menu-text">Editors</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--Charts-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-bar-chart-o"></i>
-            <span class="menu-text"> Charts </span>
-
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="flot.html">
-                <span class="menu-text">Flot Charts</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="morris.html">
-                <span class="menu-text"> Morris Charts</span>
-              </a>
-            </li>
-            <li>
-              <a href="sparkline.html">
-                <span class="menu-text">Sparkline Charts</span>
-              </a>
-            </li>
-            <li>
-              <a href="easypiecharts.html">
-                <span class="menu-text">Easy Pie Charts</span>
-              </a>
-            </li>
-            <li>
-              <a href="chartjs.html">
-                <span class="menu-text"> ChartJS</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--Profile-->
-        <li>
-          <a href="profile.html">
-            <i class="menu-icon fa fa-picture-o"></i>
-            <span class="menu-text">Profile</span>
-          </a>
-        </li>
-        <!--Mail-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-envelope-o"></i>
-            <span class="menu-text"> Mail </span>
-
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="inbox.html">
-                <span class="menu-text">Inbox</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="message-view.html">
-                <span class="menu-text">View Message</span>
-              </a>
-            </li>
-            <li>
-              <a href="message-compose.html">
-                <span class="menu-text">Compose Message</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--Calendar-->
-        <li>
-          <a href="calendar.html">
-            <i class="menu-icon fa fa-calendar"></i>
-                            <span class="menu-text">
-                                Calendar
-                            </span>
-          </a>
-        </li>
-        <!--Pages-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon glyphicon glyphicon-paperclip"></i>
-            <span class="menu-text"> Pages </span>
-
-            <i class="menu-expand"></i>
-          </a>
-          <ul class="submenu">
-            <li>
-              <a href="timeline.html">
-                <span class="menu-text">Timeline</span>
-              </a>
-            </li>
-            <li>
-              <a href="pricing.html">
-                <span class="menu-text">Pricing Tables</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="invoice.html">
-                <span class="menu-text">Invoice</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="login.html">
-                <span class="menu-text">Login</span>
-              </a>
-            </li>
-            <li>
-              <a href="register.html">
-                <span class="menu-text">Register</span>
-              </a>
-            </li>
-            <li>
-              <a href="lock.html">
-                <span class="menu-text">Lock Screen</span>
-              </a>
-            </li>
-            <li>
-              <a href="typography.html">
-                <span class="menu-text"> Typography </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--More Pages-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon glyphicon glyphicon-link"></i>
-
-                            <span class="menu-text">
-                                More Pages
-                            </span>
-
-            <i class="menu-expand"></i>
-          </a>
-
-          <ul class="submenu">
-            <li>
-              <a href="error-404.html">
-                <span class="menu-text">Error 404</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="error-500.html">
-                <span class="menu-text"> Error 500</span>
-              </a>
-            </li>
-            <li>
-              <a href="blank.html">
-                <span class="menu-text">Blank Page</span>
-              </a>
-            </li>
-            <li>
-              <a href="grid.html">
-                <span class="menu-text"> Grid</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="menu-dropdown">
-                                    <span class="menu-text">
-                                        Multi Level Menu
-                                    </span>
-                <i class="menu-expand"></i>
-              </a>
-
-              <ul class="submenu">
-                <li>
-                  <a href="#">
-                    <i class="menu-icon fa fa-camera"></i>
-                    <span class="menu-text">Level 3</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="menu-dropdown">
-                    <i class="menu-icon fa fa-asterisk"></i>
-
-                                            <span class="menu-text">
-                                                Level 4
-                                            </span>
-                    <i class="menu-expand"></i>
-                  </a>
-
-                  <ul class="submenu">
-                    <li>
-                      <a href="#">
-                        <i class="menu-icon fa fa-bolt"></i>
-                        <span class="menu-text">Some Item</span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#">
-                        <i class="menu-icon fa fa-bug"></i>
-                        <span class="menu-text">Another Item</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-            </li>
-
-          </ul>
-        </li>
-        <!--Right to Left-->
-        <li>
-          <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-align-right"></i>
-            <span class="menu-text"> Right to Left </span>
-
-            <i class="menu-expand"></i>
-          </a>
-          <ul class="submenu">
-            <li>
-              <a>
-                <span class="menu-text">RTL</span>
-                <label class="pull-right margin-top-10">
-                  <input id="rtl-changer" class="checkbox-slider slider-icon colored-primary" type="checkbox">
-                  <span class="text"></span>
-                </label>
-              </a>
-            </li>
-            <li>
-              <a href="index-rtl-ar.html">
-                <span class="menu-text">Arabic Layout</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="index-rtl-fa.html">
-                <span class="menu-text">Persian Layout</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- /Sidebar Menu -->
-    </div>
-    <!-- /Page Sidebar -->
-    <!-- Page Content -->
-    <div class="page-content">
-      <!-- Page Breadcrumb -->
-      <div class="page-breadcrumbs">
         <ul class="breadcrumb">
           <li>
-            <i class="fa fa-home"></i>
-            <a href="#">Home</a>
+            <i class="icon-home home-icon"></i>
+            <a href="#">首页</a>
           </li>
-          <li class="active">Dashboard</li>
-        </ul>
+          <li class="active">控制台</li>
+        </ul><!-- .breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+          <form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+          </form>
+        </div><!-- #nav-search -->
       </div>
-      <!-- /Page Breadcrumb -->
-      <!-- Page Header -->
-      <div class="page-header position-relative">
-        <div class="header-title">
+
+      <div class="page-content">
+        <div class="page-header">
           <h1>
-            Dashboard
+            控制台
+            <small>
+              <i class="icon-double-angle-right"></i>
+              查看
+            </small>
           </h1>
-        </div>
-        <!--Header Buttons-->
-        <div class="header-buttons">
-          <a class="sidebar-toggler" href="#">
-            <i class="fa fa-arrows-h"></i>
-          </a>
-          <a class="refresh" id="refresh-toggler" href="">
-            <i class="glyphicon glyphicon-refresh"></i>
-          </a>
-          <a class="fullscreen" id="fullscreen-toggler" href="#">
-            <i class="glyphicon glyphicon-fullscreen"></i>
-          </a>
-        </div>
-        <!--Header Buttons End-->
-      </div>
-      <!-- /Page Header -->
-      <!-- Page Body -->
-      <div class="page-body">
+        </div><!-- /.page-header -->
+
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="databox radius-bordered databox-shadowed databox-graded">
-                  <div class="databox-left bg-themesecondary">
-                    <div class="databox-piechart">
-                      <div data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="50" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.1)"><span class="white font-90">50%</span></div>
-                    </div>
-                  </div>
-                  <div class="databox-right">
-                    <span class="databox-number themesecondary">14</span>
-                    <div class="databox-text darkgray">NEW TASKS</div>
-                    <div class="databox-stat themesecondary radius-bordered">
-                      <i class="stat-icon icon-lg fa fa-tasks"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="databox radius-bordered databox-shadowed databox-graded">
-                  <div class="databox-left bg-themethirdcolor">
-                    <div class="databox-piechart">
-                      <div data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="15" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.2)"><span class="white font-90">15%</span></div>
-                    </div>
-                  </div>
-                  <div class="databox-right">
-                    <span class="databox-number themethirdcolor">1</span>
-                    <div class="databox-text darkgray">NEW MESSAGE</div>
-                    <div class="databox-stat themethirdcolor radius-bordered">
-                      <i class="stat-icon  icon-lg fa fa-envelope-o"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="databox radius-bordered databox-shadowed databox-graded">
-                  <div class="databox-left bg-themeprimary">
-                    <div class="databox-piechart">
-                      <div id="users-pie" data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="76" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.1)"><span class="white font-90">76%</span></div>
-                    </div>
-                  </div>
-                  <div class="databox-right">
-                    <span class="databox-number themeprimary">98</span>
-                    <div class="databox-text darkgray">NEW USERS</div>
-                    <div class="databox-state bg-themeprimary">
-                      <i class="fa fa-check"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="databox radius-bordered databox-shadowed databox-graded">
-                  <div class="databox-left no-padding bordered-left-2 bordered-palegreen">
-                    <img src="assets/img/avatars/John-Smith.jpg" style="width:65px; height:65px;">
-                  </div>
-                  <div class="databox-right padding-top-20">
-                    <div class="databox-stat palegreen">
-                      <i class="stat-icon icon-xlg fa fa-phone"></i>
-                    </div>
-                    <div class="databox-text darkgray">JOHN SMITH</div>
-                    <div class="databox-text darkgray">TOP RESELLER</div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+
+            <div class="alert alert-block alert-success">
+              <button type="button" class="close" data-dismiss="alert">
+                <i class="icon-remove"></i>
+              </button>
+
+              <i class="icon-ok green"></i>
+
+              欢迎使用
+              <strong class="green">
+                Ace后台管理系统
+                <small>(v1.2)</small>
+              </strong>
+              ,轻量级好用的后台管理系统模版.
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
             <div class="row">
-              <div class="col-xs-12">
-                <div class="dashboard-box">
-                  <div class="box-header">
-                    <div class="deadline">
-                      Remaining Days: 109
+              <div class="space-6"></div>
+
+              <div class="col-sm-7 infobox-container">
+                <div class="infobox infobox-green  ">
+                  <div class="infobox-icon">
+                    <i class="icon-comments"></i>
+                  </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-data-number">32</span>
+                    <div class="infobox-content">2个评论</div>
+                  </div>
+                  <div class="stat stat-success">8%</div>
+                </div>
+
+                <div class="infobox infobox-blue  ">
+                  <div class="infobox-icon">
+                    <i class="icon-twitter"></i>
+                  </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-data-number">11</span>
+                    <div class="infobox-content">新粉丝</div>
+                  </div>
+
+                  <div class="badge badge-success">
+                    +32%
+                    <i class="icon-arrow-up"></i>
+                  </div>
+                </div>
+
+                <div class="infobox infobox-pink  ">
+                  <div class="infobox-icon">
+                    <i class="icon-shopping-cart"></i>
+                  </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-data-number">8</span>
+                    <div class="infobox-content">新订单</div>
+                  </div>
+                  <div class="stat stat-important">4%</div>
+                </div>
+
+                <div class="infobox infobox-red  ">
+                  <div class="infobox-icon">
+                    <i class="icon-beaker"></i>
+                  </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-data-number">7</span>
+                    <div class="infobox-content">调查</div>
+                  </div>
+                </div>
+
+                <div class="infobox infobox-orange2  ">
+                  <div class="infobox-chart">
+                    <span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
+                  </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-data-number">6,251</span>
+                    <div class="infobox-content">页面查看次数</div>
+                  </div>
+
+                  <div class="badge badge-success">
+                    7.2%
+                    <i class="icon-arrow-up"></i>
+                  </div>
+                </div>
+
+                <div class="infobox infobox-blue2  ">
+                  <div class="infobox-progress">
+                    <div class="easy-pie-chart percentage" data-percent="42" data-size="46">
+                      <span class="percent">42</span>%
                     </div>
                   </div>
-                  <div class="box-progress">
-                    <div class="progress-handle">day 20</div>
-                    <div class="progress progress-xs progress-no-radius bg-whitesmoke">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                      </div>
+
+                  <div class="infobox-data">
+                    <span class="infobox-text">交易使用</span>
+
+                    <div class="infobox-content">
+                      <span class="bigger-110">~</span>
+                      剩余58GB
                     </div>
                   </div>
-                  <div class="box-tabbs">
-                    <div class="tabbable">
-                      <ul class="nav nav-tabs tabs-flat  nav-justified" id="myTab11">
+                </div>
+
+                <div class="space-6"></div>
+
+                <div class="infobox infobox-green infobox-small infobox-dark">
+                  <div class="infobox-progress">
+                    <div class="easy-pie-chart percentage" data-percent="61" data-size="39">
+                      <span class="percent">61</span>%
+                    </div>
+                  </div>
+
+                  <div class="infobox-data">
+                    <div class="infobox-content">任务</div>
+                    <div class="infobox-content">完成</div>
+                  </div>
+                </div>
+
+                <div class="infobox infobox-blue infobox-small infobox-dark">
+                  <div class="infobox-chart">
+                    <span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
+                  </div>
+
+                  <div class="infobox-data">
+                    <div class="infobox-content">获得</div>
+                    <div class="infobox-content">$32,000</div>
+                  </div>
+                </div>
+
+                <div class="infobox infobox-grey infobox-small infobox-dark">
+                  <div class="infobox-icon">
+                    <i class="icon-download-alt"></i>
+                  </div>
+
+                  <div class="infobox-data">
+                    <div class="infobox-content">下载次数</div>
+                    <div class="infobox-content">1,205</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="vspace-sm"></div>
+
+              <div class="col-sm-5">
+                <div class="widget-box">
+                  <div class="widget-header widget-header-flat widget-header-small">
+                    <h5>
+                      <i class="icon-signal"></i>
+                      访问来源
+                    </h5>
+
+                    <div class="widget-toolbar no-border">
+                      <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+                        本周
+                        <i class="icon-angle-down icon-on-right bigger-110"></i>
+                      </button>
+
+                      <ul class="dropdown-menu pull-right dropdown-125 dropdown-lighter dropdown-caret">
                         <li class="active">
-                          <a data-toggle="tab" href="#visits">
-                            Visits
+                          <a href="#" class="blue">
+                            <i class="icon-caret-right bigger-110">&nbsp;</i>
+                            本周
                           </a>
                         </li>
+
                         <li>
-                          <a data-toggle="tab" href="#realtime">
-                            Real-Time
+                          <a href="#">
+                            <i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+                            上周
                           </a>
                         </li>
+
                         <li>
-                          <a data-toggle="tab" id="contacttab" href="#bandwidth">
-                            Bandwidth
+                          <a href="#">
+                            <i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+                            本月
                           </a>
                         </li>
+
                         <li>
-                          <a data-toggle="tab" href="#sales">
-                            Sales
+                          <a href="#">
+                            <i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+                            上月
                           </a>
                         </li>
                       </ul>
-                      <div class="tab-content tabs-flat no-padding">
-                        <div id="visits" class="tab-pane active animated fadeInUp">
-                          <div class="row">
-                            <div class="col-lg-12 chart-container">
-                              <div id="dashboard-chart-visits" class="chart chart-lg no-margin"></div>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div id="realtime" class="tab-pane padding-left-5 padding-right-10 animated fadeInUp">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div id="dashboard-chart-realtime" class="chart chart-lg no-margin" style="width:100%"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="bandwidth" class="tab-pane padding-10 animated fadeInUp">
-                          <div class="databox-sparkline bg-themeprimary">
-                                                            <span id="dashboard-bandwidth-chart" data-sparkline="compositeline" data-height="250px" data-width="100%" data-linecolor="#fff" data-secondlinecolor="#eee"
-                                                                  data-fillcolor="rgba(255,255,255,.1)" data-secondfillcolor="rgba(255,255,255,.25)"
-                                                                  data-spotradius="0"
-                                                                  data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#ffce55"
-                                                                  data-highlightspotcolor="#fff" data-highlightlinecolor="#fff"
-                                                                  data-linewidth="2" data-secondlinewidth="2"
-                                                                  data-composite="500, 400, 100, 450, 300, 200, 100, 200">
-                                                                300,300,400,300,200,300,300,200
-                                                            </span>
-                          </div>
-                        </div>
-                        <div id="sales" class="tab-pane animated fadeInUp no-padding-bottom" style="padding:20px 20px 0 20px;">
-                          <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
-                                <div class="databox-top">
-                                  <div class="databox-sparkline">
-                                                                            <span data-sparkline="line" data-height="125px" data-width="100%" data-fillcolor="false" data-linecolor="themesecondary"
-                                                                                  data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#ffce55"
-                                                                                  data-highlightspotcolor="#ffce55" data-highlightlinecolor="#ffce55"
-                                                                                  data-linewidth="1.5" data-spotradius="2">
-                                                                                1,2,4,3,5,6,8,7,11,14,11,12
-                                                                            </span>
-                                  </div>
-                                </div>
-                                <div class="databox-bottom no-padding text-align-center">
-                                  <span class="databox-number lightcarbon no-margin">224</span>
-                                  <span class="databox-text lightcarbon no-margin">Sale Unit / Hour</span>
-
-                                </div>
-                              </div>
-
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
-                                <div class="databox-top">
-                                  <div class="databox-sparkline">
-                                                                            <span data-sparkline="line" data-height="125px" data-width="100%" data-fillcolor="false" data-linecolor="themefourthcolor"
-                                                                                  data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#8cc474"
-                                                                                  data-highlightspotcolor="#8cc474" data-highlightlinecolor="#8cc474"
-                                                                                  data-linewidth="1.5" data-spotradius="2">
-                                                                                100,208,450,298,450,776,234,680,1100,1400,1000,1200
-                                                                            </span>
-                                  </div>
-                                </div>
-                                <div class="databox-bottom no-padding text-align-center">
-                                  <span class="databox-number lightcarbon no-margin">7063$</span>
-                                  <span class="databox-text lightcarbon no-margin">Income / Hour</span>
-
-                                </div>
-                              </div>
-
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="databox databox-xlg databox-vertical databox-inverted databox-shadowed">
-                                <div class="databox-top">
-                                  <div class="databox-piechart">
-                                    <div data-toggle="easypiechart" class="easyPieChart block-center"
-                                         data-barcolor="themeprimary" data-linecap="butt" data-percent="80" data-animate="500"
-                                         data-linewidth="8" data-size="125" data-trackcolor="#eee">
-                                      <span class="font-200"><i class="fa fa-gift themeprimary"></i></span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="databox-bottom no-padding text-align-center">
-                                  <span class="databox-number lightcarbon no-margin">9</span>
-                                  <span class="databox-text lightcarbon no-margin">NEW ORDERS</span>
-
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="databox databox-xlg databox-vertical databox-inverted  databox-shadowed">
-                                <div class="databox-top">
-                                  <div class="databox-piechart">
-                                    <div data-toggle="easypiechart" class="easyPieChart block-center"
-                                         data-barcolor="themethirdcolor" data-linecap="butt" data-percent="40" data-animate="500"
-                                         data-linewidth="8" data-size="125" data-trackcolor="#eee">
-                                      <span class="white font-200"><i class="fa fa-tags themethirdcolor"></i></span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="databox-bottom no-padding text-align-center">
-                                  <span class="databox-number lightcarbon no-margin">11</span>
-                                  <span class="databox-text lightcarbon no-margin">NEW TICKETS</span>
-
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="box-days">
-                    <div class="row">
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container" href="">
-                          <div class="day">16</div>
-                          <div class="month">AUG</div>
-                        </a>
-                      </div>
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container" href="">
-                          <div class="day">15</div>
-                          <div class="month">JUL</div>
-                          <b class="day-pin"></b>
-                        </a>
-                      </div>
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container highlight" href="">
-                          <div class="day">11</div>
-                          <div class="month">JUN</div>
-                        </a>
-                      </div>
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container" href="">
-                          <div class="day">09</div>
-                          <div class="month">MAY</div>
-                        </a>
-                      </div>
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container " href="">
-                          <div class="day">14</div>
-                          <div class="month">APR</div>
-                          <b class="day-pin"></b>
-                        </a>
-                      </div>
-                      <div class=" col-lg-1 col-md-1 col-sm-6 col-xs-12">
-                        <a class="day-container" href="">
-                          <div class="day">01</div>
-                          <div class="month">MAR</div>
-                        </a>
-                      </div>
-                      <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a class="day-container all" href="">
-                          <div class="day">2013</div>
-                          <div class="month">SEE ALL</div>
-                                                        <span class="day-more">
-                                                            <i></i>
-                                                        </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="orders-container">
-              <div class="orders-header">
-                <h6>Latest Orders</h6>
-              </div>
-              <ul class="orders-list">
-                <li class="order-item">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                      <div class="item-booker">Ned Stards</div>
-                      <div class="item-time">
-                        <i class="fa fa-calendar"></i>
-                        <span>10 minutes ago</span>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
-                      <div class="item-price">
-                        <span class="currency">$</span>
-                        <span class="price">400</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="item-more" href="">
-                    <i></i>
-                  </a>
-                </li>
-                <li class="order-item top">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                      <div class="item-booker">Steve Lewis</div>
-                      <div class="item-time">
-                        <i class="fa fa-calendar"></i>
-                        <span>2 hours ago</span>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
-                      <div class="item-price">
-                        <span class="currency">$</span>
-                        <span class="price">620</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="item-more" href="">
-                    <i></i>
-                  </a>
-                </li>
-                <li class="order-item">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                      <div class="item-booker">John Ford</div>
-                      <div class="item-time">
-                        <i class="fa fa-calendar"></i>
-                        <span>Today 8th July</span>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
-                      <div class="item-price">
-                        <span class="currency">$</span>
-                        <span class="price">220</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="item-more" href="">
-                    <i></i>
-                  </a>
-                </li>
-                <li class="order-item">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                      <div class="item-booker">Kim Basinger</div>
-                      <div class="item-time">
-                        <i class="fa fa-calendar"></i>
-                        <span>Yesterday 7th July</span>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
-                      <div class="item-price">
-                        <span class="currency">$</span>
-                        <span class="price">400</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="item-more" href="">
-                    <i></i>
-                  </a>
-                </li>
-                <li class="order-item">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 item-left">
-                      <div class="item-booker">Steve Lewis</div>
-                      <div class="item-time">
-                        <i class="fa fa-calendar"></i>
-                        <span>5th July</span>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 item-right">
-                      <div class="item-price">
-                        <span class="currency">$</span>
-                        <span class="price">340</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="item-more" href="">
-                    <i></i>
-                  </a>
-                </li>
-              </ul>
-              <div class="orders-footer">
-                <a class="show-all" href=""><i class="fa fa-angle-down"></i> Show All</a>
-                <div class="help">
-                  <a href=""><i class="fa fa-question"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-sm-12 col-xs-12">
-            <div class="widget">
-              <div class="widget-header bordered-bottom bordered-themeprimary">
-                <i class="widget-icon fa fa-tasks themeprimary"></i>
-                <span class="widget-caption themeprimary">Task Board</span>
-              </div><!--Widget Header-->
-              <div class="widget-body">
-                <div class="widget-main no-padding">
-                  <div class="task-container">
-                    <div class="task-search">
-                                                <span class="input-icon">
-                                                    <input type="text" class="form-control" placeholder="Search Tasks">
-                                                    <i class="fa fa-search gray"></i>
-                                                </span>
-                    </div>
-                    <ul class="tasks-list">
-                      <li class="task-item">
-                        <div class="task-check">
-                          <label>
-                            <input type="checkbox">
-                            <span class="text"></span>
-                          </label>
-                        </div>
-                        <div class="task-state">
-                                                        <span class="label label-yellow">
-                                                            In Progress
-                                                        </span>
-                        </div>
-                        <div class="task-time">1 hour ago</div>
-                        <div class="task-body">Ask to the sysadmins to install Python 3 on the server and run it</div>
-                        <div class="task-creator"><a href="">Cameron Hetfield</a></div>
-                        <div class="task-assignedto">assigned to you</div>
-                      </li>
-                      <li class="task-item">
-                        <div class="task-check">
-                          <label>
-                            <input type="checkbox">
-                            <span class="text"></span>
-                          </label>
-                        </div>
-                        <div class="task-state">
-                                                        <span class="label label-orange">
-                                                            Active
-                                                        </span>
-                        </div>
-                        <div class="task-time">2 hours ago</div>
-                        <div class="task-body">Write documentation for the new API with test and deploy specifications</div>
-                        <div class="task-creator"><a href="">Behrang Nitsche</a></div>
-                        <div class="task-assignedto">assigned to you</div>
-                      </li>
-                      <li class="task-item">
-                        <div class="task-check">
-                          <label>
-                            <input type="checkbox">
-                            <span class="text"></span>
-                          </label>
-                        </div>
-                        <div class="task-state">
-                                                        <span class="label label-palegreen">
-                                                            Approved
-                                                        </span>
-                        </div>
-                        <div class="task-time">yesterday</div>
-                        <div class="task-body">Code refactoring and rewriting silly codes and test it</div>
-                        <div class="task-creator"><a href="">David Fincher</a></div>
-                        <div class="task-assignedto">assigned to Kim</div>
-                      </li>
-                    </ul>
-                  </div>
-                </div><!--Widget Main Container-->
-              </div><!--Widget Body-->
-            </div>
+                  <div class="widget-body">
+                    <div class="widget-main">
+                      <div id="piechart-placeholder"></div>
 
-          </div>
-          <div class="col-lg-8 col-sm-12 col-xs-12">
+                      <div class="hr hr8 hr-double"></div>
+
+                      <div class="clearfix">
+                        <div class="grid3">
+															<span class="grey">
+																<i class="icon-facebook-sign icon-2x blue"></i>
+																&nbsp; likes
+															</span>
+                          <h4 class="bigger pull-right">1,255</h4>
+                        </div>
+
+                        <div class="grid3">
+															<span class="grey">
+																<i class="icon-twitter-sign icon-2x purple"></i>
+																&nbsp; tweets
+															</span>
+                          <h4 class="bigger pull-right">941</h4>
+                        </div>
+
+                        <div class="grid3">
+															<span class="grey">
+																<i class="icon-pinterest-sign icon-2x red"></i>
+																&nbsp; pins
+															</span>
+                          <h4 class="bigger pull-right">1,050</h4>
+                        </div>
+                      </div>
+                    </div><!-- /widget-main -->
+                  </div><!-- /widget-body -->
+                </div><!-- /widget-box -->
+              </div><!-- /span -->
+            </div><!-- /row -->
+
+            <div class="hr hr32 hr-dotted"></div>
 
             <div class="row">
-              <div class="col-lg-12">
-                <div class="widget">
-                  <div class="widget-header bordered-bottom bordered-themesecondary">
-                    <i class="widget-icon fa fa-tags themesecondary"></i>
-                    <span class="widget-caption themesecondary">Ticket Board</span>
-                  </div><!--Widget Header-->
+              <div class="col-sm-5">
+                <div class="widget-box transparent">
+                  <div class="widget-header widget-header-flat">
+                    <h4 class="lighter">
+                      <i class="icon-star orange"></i>
+                      热门域名
+                    </h4>
+
+                    <div class="widget-toolbar">
+                      <a href="#" data-action="collapse">
+                        <i class="icon-chevron-up"></i>
+                      </a>
+                    </div>
+                  </div>
+
                   <div class="widget-body">
                     <div class="widget-main no-padding">
-                      <div class="tickets-container">
-                        <ul class="tickets-list">
-                          <li class="ticket-item">
-                            <div class="row">
-                              <div class="ticket-user col-lg-6 col-sm-12">
-                                <img src="assets/img/avatars/adam-jansen.jpg" class="user-avatar">
-                                <span class="user-name">Adam Johnson</span>
-                                <span class="user-at">at</span>
-                                <span class="user-company">Microsoft</span>
-                              </div>
-                              <div class="ticket-time  col-lg-4 col-sm-6 col-xs-12">
-                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
-                                <i class="fa fa-clock-o"></i>
-                                <span class="time">1 Hours Ago</span>
-                              </div>
-                              <div class="ticket-type  col-lg-2 col-sm-6 col-xs-12">
-                                <span class="divider hidden-xs"></span>
-                                <span class="type">Issue</span>
-                              </div>
-                              <div class="ticket-state bg-palegreen">
-                                <i class="fa fa-check"></i>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="ticket-item">
-                            <div class="row">
-                              <div class="ticket-user col-lg-6 col-sm-12">
-                                <img src="assets/img/avatars/divyia.jpg" class="user-avatar">
-                                <span class="user-name">Divyia Phillips</span>
-                                <span class="user-at">at</span>
-                                <span class="user-company">Dribbble</span>
-                              </div>
-                              <div class="ticket-time  col-lg-4 col-sm-6 col-xs-12">
-                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
-                                <i class="fa fa-clock-o"></i>
-                                <span class="time">3 Hours Ago</span>
-                              </div>
-                              <div class="ticket-type  col-lg-2 col-sm-6 col-xs-12">
-                                <span class="divider hidden-xs"></span>
-                                <span class="type">Payment</span>
-                              </div>
-                              <div class="ticket-state bg-palegreen">
-                                <i class="fa fa-check"></i>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="ticket-item">
-                            <div class="row">
-                              <div class="ticket-user col-lg-6 col-sm-12">
-                                <img src="assets/img/avatars/Matt-Cheuvront.jpg" class="user-avatar">
-                                <span class="user-name">Nicolai Larson</span>
-                                <span class="user-at">at</span>
-                                <span class="user-company">Google</span>
-                              </div>
-                              <div class="ticket-time  col-lg-4 col-sm-6 col-xs-12">
-                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
-                                <i class="fa fa-clock-o"></i>
-                                <span class="time">18 Hours Ago</span>
-                              </div>
-                              <div class="ticket-type  col-lg-2 col-sm-6 col-xs-12">
-                                <span class="divider hidden-xs"></span>
-                                <span class="type">Issue</span>
-                              </div>
-                              <div class="ticket-state bg-darkorange">
-                                <i class="fa fa-times"></i>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="ticket-item">
-                            <div class="row">
-                              <div class="ticket-user col-lg-6 col-sm-12">
-                                <img src="assets/img/avatars/Sergey-Azovskiy.jpg" class="user-avatar">
-                                <span class="user-name">Bill Jackson</span>
-                                <span class="user-at">at</span>
-                                <span class="user-company">Mabna</span>
-                              </div>
-                              <div class="ticket-time  col-lg-4 col-sm-6 col-xs-12">
-                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
-                                <i class="fa fa-clock-o"></i>
-                                <span class="time">2 days Ago</span>
-                              </div>
-                              <div class="ticket-type  col-lg-2 col-sm-6 col-xs-12">
-                                <span class="divider hidden-xs"></span>
-                                <span class="type">Payment</span>
-                              </div>
-                              <div class="ticket-state bg-palegreen">
-                                <i class="fa fa-check"></i>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="ticket-item">
-                            <div class="row">
-                              <div class="ticket-user col-lg-6 col-sm-12">
-                                <img src="assets/img/avatars/John-Smith.jpg" class="user-avatar">
-                                <span class="user-name">Eric Clapton</span>
-                                <span class="user-at">at</span>
-                                <span class="user-company">Musicker</span>
-                              </div>
-                              <div class="ticket-time  col-lg-4 col-sm-6 col-xs-12">
-                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
-                                <i class="fa fa-clock-o"></i>
-                                <span class="time">2 days Ago</span>
-                              </div>
-                              <div class="ticket-type  col-lg-2 col-sm-6 col-xs-12">
-                                <span class="divider hidden-xs"></span>
-                                <span class="type">Info</span>
-                              </div>
-                              <div class="ticket-state bg-yellow">
-                                <i class="fa fa-info"></i>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                      <table class="table table-bordered table-striped">
+                        <thead class="thin-border-bottom">
+                        <tr>
+                          <th>
+                            <i class="icon-caret-right blue"></i>
+                            名称
+                          </th>
+
+                          <th>
+                            <i class="icon-caret-right blue"></i>
+                            价格
+                          </th>
+
+                          <th class="hidden-480">
+                            <i class="icon-caret-right blue"></i>
+                            状态
+                          </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                          <td>internet.com</td>
+
+                          <td>
+                            <small>
+                              <s class="red">$29.99</s>
+                            </small>
+                            <b class="green">$19.99</b>
+                          </td>
+
+                          <td class="hidden-480">
+                            <span class="label label-info arrowed-right arrowed-in">销售中</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>online.com</td>
+
+                          <td>
+                            <small>
+                              <s class="red"></s>
+                            </small>
+                            <b class="green">$16.45</b>
+                          </td>
+
+                          <td class="hidden-480">
+                            <span class="label label-success arrowed-in arrowed-in-right">可用</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>newnet.com</td>
+
+                          <td>
+                            <small>
+                              <s class="red"></s>
+                            </small>
+                            <b class="green">$15.00</b>
+                          </td>
+
+                          <td class="hidden-480">
+                            <span class="label label-danger arrowed">待定</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>web.com</td>
+
+                          <td>
+                            <small>
+                              <s class="red">$24.99</s>
+                            </small>
+                            <b class="green">$19.95</b>
+                          </td>
+
+                          <td class="hidden-480">
+																	<span class="label arrowed">
+																		<s>无货</s>
+																	</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>domain.com</td>
+
+                          <td>
+                            <small>
+                              <s class="red"></s>
+                            </small>
+                            <b class="green">$12.00</b>
+                          </td>
+
+                          <td class="hidden-480">
+                            <span class="label label-warning arrowed arrowed-right">售完</span>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- /widget-main -->
+                  </div><!-- /widget-body -->
+                </div><!-- /widget-box -->
+              </div>
+
+              <div class="col-sm-7">
+                <div class="widget-box transparent">
+                  <div class="widget-header widget-header-flat">
+                    <h4 class="lighter">
+                      <i class="icon-signal"></i>
+                      销售统计
+                    </h4>
+
+                    <div class="widget-toolbar">
+                      <a href="#" data-action="collapse">
+                        <i class="icon-chevron-up"></i>
+                      </a>
                     </div>
                   </div>
-                </div>
 
+                  <div class="widget-body">
+                    <div class="widget-main padding-4">
+                      <div id="sales-charts"></div>
+                    </div><!-- /widget-main -->
+                  </div><!-- /widget-body -->
+                </div><!-- /widget-box -->
               </div>
             </div>
+
+            <div class="hr hr32 hr-dotted"></div>
+
             <div class="row">
-              <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
-                  <div class="databox-top bg-palegreen no-padding">
-                    <div class="databox-stat white bg-palegreen font-120">
-                      <i class="stat-icon fa fa-caret-down icon-xlg"></i>
-                    </div>
-                    <div class="horizontal-space space-lg"></div>
-                    <div class="databox-sparkline no-margin">
-                                                <span data-sparkline="compositebar" data-height="82px" data-width="100%"
-                                                      data-barcolor="#b0dc81"
-                                                      data-barwidth="10px" data-barspacing="5px"
-                                                      data-fillcolor="false" data-linecolor="#fff" data-spotradius="3" data-linewidth="2"
-                                                      data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#fff"
-                                                      data-highlightspotcolor="#fff" data-highlightlinecolor="#fff"
-                                                      data-composite="7, 6, 5, 7, 9, 10, 8, 7, 6, 6, 4, 7, 8">
-                                                    8,4,1,2,4,6,2,4,4,8,10,7,10
-                                                </span>
-                    </div>
-                  </div>
-                  <div class="databox-bottom no-padding">
-                    <div class="databox-row">
-                      <div class="databox-cell cell-6 text-align-left">
-                        <span class="databox-text">Sales Total</span>
-                        <span class="databox-number">$23,657</span>
-                      </div>
-                      <div class="databox-cell cell-6 text-align-right">
-                        <span class="databox-text">September</span>
-                        <span class="databox-number font-70">$1,257</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
-                  <div class="databox-top bg-orange no-padding">
-                    <div class="databox-stat white bg-orange font-120">
-                      <i class="stat-icon fa fa-caret-up icon-xlg"></i>
-                    </div>
-                    <div class="horizontal-space space-lg"></div>
-                    <div class="databox-sparkline no-margin">
-                                                <span data-sparkline="compositebar" data-height="82px" data-width="100%"
-                                                      data-barcolor="#fb7d64"
-                                                      data-barwidth="10px" data-barspacing="5px"
-                                                      data-fillcolor="false" data-linecolor="#fff" data-spotradius="3" data-linewidth="2"
-                                                      data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#fff"
-                                                      data-highlightspotcolor="#fff" data-highlightlinecolor="#fff"
-                                                      data-composite="7, 6, 5, 7, 9, 10, 8, 6,2,4,1,2,7">
-                                                    10,7,10,8,4,6, 6, 4, 7, 8 ,4,4,8
-                                                </span>
-                    </div>
-                  </div>
-                  <div class="databox-bottom no-padding">
-                    <div class="databox-row">
-                      <div class="databox-cell cell-6 text-align-left">
-                        <span class="databox-text">Users Total</span>
-                        <span class="databox-number">76,109</span>
-                      </div>
-                      <div class="databox-cell cell-6 text-align-right">
-                        <span class="databox-text">New</span>
-                        <span class="databox-number font-70">7,540</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-sm-6">
+                <div class="widget-box transparent" id="recent-box">
+                  <div class="widget-header">
+                    <h4 class="lighter smaller">
+                      <i class="icon-rss orange"></i>
+                      最近
+                    </h4>
 
-              </div>
-              <div class="col=lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="databox databox-lg databox-inverted radius-bordered databox-shadowed databox-graded databox-vertical">
-                  <div class="databox-top bg-azure no-padding">
-                    <div class="databox-stat white bg-azure font-120">
-                      <i class="stat-icon fa fa-caret-up icon-xlg"></i>
-                    </div>
-                    <div class="horizontal-space space-lg"></div>
-                    <div class="databox-sparkline no-margin">
-                                                <span data-sparkline="compositebar" data-height="82px" data-width="100%"
-                                                      data-barcolor="#3bcbef"
-                                                      data-barwidth="10px" data-barspacing="5px"
-                                                      data-fillcolor="false" data-linecolor="#fff" data-spotradius="3" data-linewidth="2"
-                                                      data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#fff"
-                                                      data-highlightspotcolor="#fff" data-highlightlinecolor="#fff"
-                                                      data-composite="8,4,1,2,4,6,2,4,4,8,10,7,7">
-                                                    7, 6, 5, 7, 9, 10, 8, 7, 6, 6, 4, 7, 8
-                                                </span>
-                    </div>
-                  </div>
-                  <div class="databox-bottom no-padding">
-                    <div class="databox-row">
-                      <div class="databox-cell cell-6 text-align-left">
-                        <span class="databox-text">Visits Total</span>
-                        <span class="databox-number">990,541</span>
-                      </div>
-                      <div class="databox-cell cell-6 text-align-right">
-                        <span class="databox-text">September</span>
-                        <span class="databox-number font-70">292,123</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    <div class="widget-toolbar no-border">
+                      <ul class="nav nav-tabs" id="recent-tab">
+                        <li class="active">
+                          <a data-toggle="tab" href="#task-tab">任务</a>
+                        </li>
 
-              </div>
-            </div>
+                        <li>
+                          <a data-toggle="tab" href="#member-tab">会员</a>
+                        </li>
 
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div class="databox databox-xxlg databox-vertical databox-inverted">
-              <div class="databox-top bg-whitesmoke no-padding">
-                <div class="databox-row row-2 bg-orange no-padding">
-                  <div class="databox-cell cell-1 text-align-center no-padding padding-top-5">
-                    <span class="databox-number white"><i class="fa fa-bar-chart-o no-margin"></i></span>
-                  </div>
-                  <div class="databox-cell cell-8 no-padding padding-top-5 text-align-left">
-                    <span class="databox-number white">PAGE VIEWS</span>
-                  </div>
-                  <div class="databox-cell cell-3 text-align-right padding-10">
-                    <span class="databox-text white">13 DECEMBER</span>
-                  </div>
-                </div>
-                <div class="databox-row row-4">
-                  <div class="databox-cell cell-6 no-padding padding-10 padding-left-20 text-align-left">
-                    <span class="databox-number orange no-margin">534,908</span>
-                    <span class="databox-text sky no-margin">OVERAL VIEWS</span>
-                  </div>
-                  <div class="databox-cell cell-2 no-padding padding-10 text-align-left">
-                    <span class="databox-number orange no-margin">4,129</span>
-                    <span class="databox-text darkgray no-margin">THIS WEEK</span>
-                  </div>
-                  <div class="databox-cell cell-2 no-padding padding-10 text-align-left">
-                    <span class="databox-number orange no-margin">329</span>
-                    <span class="databox-text darkgray no-margin">YESTERDAY</span>
-                  </div>
-                  <div class="databox-cell cell-2 no-padding padding-10 text-align-left">
-                    <span class="databox-number orange no-margin">104</span>
-                    <span class="databox-text darkgray no-margin">TODAY</span>
-                  </div>
-                </div>
-                <div class="databox-row row-6 no-padding">
-                  <div class="databox-sparkline">
-                                            <span data-sparkline="line" data-height="126px" data-width="100%" data-fillcolor="#37c2e2" data-linecolor="#37c2e2"
-                                                  data-spotcolor="#fafafa" data-minspotcolor="#fafafa" data-maxspotcolor="#ffce55"
-                                                  data-highlightspotcolor="#f5f5f5 " data-highlightlinecolor="#f5f5f5"
-                                                  data-linewidth="2" data-spotradius="0">
-                                                5,7,6,5,9,4,3,7,2
-                                            </span>
-                  </div>
-                </div>
-              </div>
-              <div class="databox-bottom bg-sky no-padding">
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Mon</span>
-                </div>
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Tues</span>
-                </div>
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Wed</span>
-                </div>
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Thu</span>
-                </div>
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Fri</span>
-                </div>
-                <div class="databox-cell cell-2 text-align-center no-padding padding-top-5">
-                  <span class="databox-header white">Sat</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div class="databox databox-xxlg databox-vertical databox-shadowed bg-white radius-bordered padding-5">
-              <div class="databox-top">
-                <div class="databox-row row-12">
-                  <div class="databox-cell cell-3 text-center">
-                    <div class="databox-number number-xxlg sonic-silver">164</div>
-                    <div class="databox-text storm-cloud">online</div>
-                  </div>
-                  <div class="databox-cell cell-9 text-align-center">
-                    <div class="databox-row row-6 text-left">
-                      <span class="badge badge-palegreen badge-empty margin-left-5"></span>
-                      <span class="databox-inlinetext uppercase darkgray margin-left-5">NEW</span>
-                      <span class="badge badge-yellow badge-empty margin-left-5"></span>
-                      <span class="databox-inlinetext uppercase darkgray margin-left-5">RETURNING</span>
+                        <li>
+                          <a data-toggle="tab" href="#comment-tab">评论</a>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="databox-row row-6">
-                      <div class="progress bg-yellow progress-no-radius">
-                        <div class="progress-bar progress-bar-palegreen" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
+                  </div>
+
+                  <div class="widget-body">
+                    <div class="widget-main padding-4">
+                      <div class="tab-content padding-8 overflow-visible">
+                        <div id="task-tab" class="tab-pane active">
+                          <h4 class="smaller lighter green">
+                            <i class="icon-list"></i>
+                            可拖拽排序列表
+                          </h4>
+
+                          <ul id="tasks" class="item-list">
+                            <li class="item-orange clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> 问答</span>
+                              </label>
+
+                              <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+                                <span class="percent">42</span>%
+                              </div>
+                            </li>
+
+                            <li class="item-red clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> BUG修复</span>
+                              </label>
+
+                              <div class="pull-right action-buttons">
+                                <a href="#" class="blue">
+                                  <i class="icon-pencil bigger-130"></i>
+                                </a>
+
+                                <span class="vbar"></span>
+
+                                <a href="#" class="red">
+                                  <i class="icon-trash bigger-130"></i>
+                                </a>
+
+                                <span class="vbar"></span>
+
+                                <a href="#" class="green">
+                                  <i class="icon-flag bigger-130"></i>
+                                </a>
+                              </div>
+                            </li>
+
+                            <li class="item-default clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl">添加新的特征</span>
+                              </label>
+
+                              <div class="inline pull-right position-relative dropdown-hover">
+                                <button class="btn btn-minier bigger btn-primary">
+                                  <i class="icon-cog icon-only bigger-120"></i>
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close pull-right">
+                                  <li>
+                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Mark&nbsp;as&nbsp;done">
+																					<span class="green">
+																						<i class="icon-ok bigger-110"></i>
+																					</span>
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																					<span class="red">
+																						<i class="icon-trash bigger-110"></i>
+																					</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            <li class="item-blue clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> 更新模版脚本</span>
+                              </label>
+                            </li>
+
+                            <li class="item-grey clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> 添加新皮肤</span>
+                              </label>
+                            </li>
+
+                            <li class="item-green clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> 升级服务端</span>
+                              </label>
+                            </li>
+
+                            <li class="item-pink clearfix">
+                              <label class="inline">
+                                <input type="checkbox" class="ace" />
+                                <span class="lbl"> 清理垃圾</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div id="member-tab" class="tab-pane">
+                          <div class="clearfix">
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Bob Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/user.jpg" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Bob Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">20 min</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-warning label-sm">pending</span>
+
+                                  <div class="inline position-relative">
+                                    <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                      <i class="icon-angle-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                                      <li>
+                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="icon-ok bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="icon-remove bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="icon-trash bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Joe Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar2.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Joe Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">1 hour</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-warning label-sm">pending</span>
+
+                                  <div class="inline position-relative">
+                                    <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                      <i class="icon-angle-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                                      <li>
+                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="icon-ok bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="icon-remove bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="icon-trash bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Jim Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Jim Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">2 hour</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-warning label-sm">pending</span>
+
+                                  <div class="inline position-relative">
+                                    <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                      <i class="icon-angle-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                                      <li>
+                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																							<span class="green">
+																								<i class="icon-ok bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																							<span class="orange">
+																								<i class="icon-remove bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+
+                                      <li>
+                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																							<span class="red">
+																								<i class="icon-trash bigger-110"></i>
+																							</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Alex Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar5.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Alex Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">3 hour</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-danger label-sm">blocked</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Bob Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar2.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Bob Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">6 hour</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-success label-sm arrowed-in">approved</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Susan's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar3.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Susan</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">yesterday</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-success label-sm arrowed-in">approved</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Phil Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar4.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Phil Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">2 days ago</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-info label-sm arrowed-in arrowed-in-right">online</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv memberdiv">
+                              <div class="user">
+                                <img alt="Alexa Doe's avatar" src="${ctx}/assets/plugin/ace/avatars/avatar1.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Alexa Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">3天以前</span>
+                                </div>
+
+                                <div>
+                                  <span class="label label-success label-sm arrowed-in">approved</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="center">
+                            <i class="icon-group icon-2x green"></i>
+
+                            &nbsp;
+                            <a href="#">
+                              查看所有会员 &nbsp;
+                              <i class="icon-arrow-right"></i>
+                            </a>
+                          </div>
+
+                          <div class="hr hr-double hr8"></div>
+                        </div><!-- member-tab -->
+
+                        <div id="comment-tab" class="tab-pane">
+                          <div class="comments">
+                            <div class="itemdiv commentdiv">
+                              <div class="user">
+                                <img alt="Bob Doe's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Bob Doe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="green">6 min</span>
+                                </div>
+
+                                <div class="text">
+                                  <i class="icon-quote-left"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                </div>
+                              </div>
+
+                              <div class="tools">
+                                <div class="inline position-relative">
+                                  <button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+                                    <i class="icon-angle-down icon-only bigger-120"></i>
+                                  </button>
+
+                                  <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                                    <li>
+                                      <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																						<span class="green">
+																							<i class="icon-ok bigger-110"></i>
+																						</span>
+                                      </a>
+                                    </li>
+
+                                    <li>
+                                      <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																						<span class="orange">
+																							<i class="icon-remove bigger-110"></i>
+																						</span>
+                                      </a>
+                                    </li>
+
+                                    <li>
+                                      <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																						<span class="red">
+																							<i class="icon-trash bigger-110"></i>
+																						</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv commentdiv">
+                              <div class="user">
+                                <img alt="Jennifer's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar1.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Jennifer</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="blue">15 min</span>
+                                </div>
+
+                                <div class="text">
+                                  <i class="icon-quote-left"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                </div>
+                              </div>
+
+                              <div class="tools">
+                                <div class="action-buttons bigger-125">
+                                  <a href="#">
+                                    <i class="icon-pencil blue"></i>
+                                  </a>
+
+                                  <a href="#">
+                                    <i class="icon-trash red"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv commentdiv">
+                              <div class="user">
+                                <img alt="Joe's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar2.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Joe</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="orange">22 min</span>
+                                </div>
+
+                                <div class="text">
+                                  <i class="icon-quote-left"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                </div>
+                              </div>
+
+                              <div class="tools">
+                                <div class="action-buttons bigger-125">
+                                  <a href="#">
+                                    <i class="icon-pencil blue"></i>
+                                  </a>
+
+                                  <a href="#">
+                                    <i class="icon-trash red"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="itemdiv commentdiv">
+                              <div class="user">
+                                <img alt="Rita's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar3.png" />
+                              </div>
+
+                              <div class="body">
+                                <div class="name">
+                                  <a href="#">Rita</a>
+                                </div>
+
+                                <div class="time">
+                                  <i class="icon-time"></i>
+                                  <span class="red">50 min</span>
+                                </div>
+
+                                <div class="text">
+                                  <i class="icon-quote-left"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                </div>
+                              </div>
+
+                              <div class="tools">
+                                <div class="action-buttons bigger-125">
+                                  <a href="#">
+                                    <i class="icon-pencil blue"></i>
+                                  </a>
+
+                                  <a href="#">
+                                    <i class="icon-trash red"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hr hr8"></div>
+
+                          <div class="center">
+                            <i class="icon-comments-alt icon-2x green"></i>
+
+                            &nbsp;
+                            <a href="#">
+                              See all comments &nbsp;
+                              <i class="icon-arrow-right"></i>
+                            </a>
+                          </div>
+
+                          <div class="hr hr-double hr8"></div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="databox-bottom">
-                <div class="databox-row row-12">
-                  <div class="databox-cell cell-7 text-center  padding-5">
-                    <div id="dashboard-pie-chart-sources" class="chart"></div>
-                  </div>
-                  <div class="databox-cell cell-5 text-center no-padding-left padding-bottom-30">
-                    <div class="databox-row row-2 bordered-bottom bordered-ivory padding-10">
-                      <span class="databox-text sonic-silver pull-left no-margin">Type</span>
-                      <span class="databox-text sonic-silver pull-right no-margin uppercase">PCT</span>
-                    </div>
-                    <div class="databox-row row-2 bordered-bottom bordered-ivory padding-10">
-                      <span class="badge badge-blue badge-empty pull-left margin-5"></span>
-                      <span class="databox-text darkgray pull-left no-margin hidden-xs">FEED</span>
-                      <span class="databox-text darkgray pull-right no-margin uppercase">46%</span>
-                    </div>
-                    <div class="databox-row row-2 bordered-bottom bordered-ivory padding-10">
-                      <span class="badge badge-orange badge-empty pull-left margin-5"></span>
-                      <span class="databox-text darkgray pull-left no-margin hidden-xs">PREFERRAL</span>
-                      <span class="databox-text darkgray pull-right no-margin uppercase">21%</span>
-                    </div>
-                    <div class="databox-row row-2 bordered-bottom bordered-ivory padding-10">
-                      <span class="badge badge-pink badge-empty pull-left margin-5"></span>
-                      <span class="databox-text darkgray pull-left no-margin hidden-xs">DIRECT</span>
-                      <span class="databox-text darkgray pull-right no-margin uppercase">12%</span>
-                    </div>
-                    <div class="databox-row row-2 bordered-bottom bordered-ivory padding-10">
-                      <span class="badge badge-palegreen badge-empty pull-left margin-5"></span>
-                      <span class="databox-text darkgray pull-left no-margin hidden-xs">EMAIL</span>
-                      <span class="databox-text darkgray pull-right no-margin uppercase">11%</span>
-                    </div>
-                    <div class="databox-row row-2 padding-10">
-                      <span class="badge badge-yellow badge-empty pull-left margin-5"></span>
-                      <span class="databox-text darkgray pull-left no-margin hidden-xs">ORGANIC</span>
-                      <span class="databox-text darkgray pull-right no-margin uppercase">10%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                    </div><!-- /widget-main -->
+                  </div><!-- /widget-body -->
+                </div><!-- /widget-box -->
+              </div><!-- /span -->
 
+              <div class="col-sm-6">
+                <div class="widget-box ">
+                  <div class="widget-header">
+                    <h4 class="lighter smaller">
+                      <i class="icon-comment blue"></i>
+                      会话
+                    </h4>
+                  </div>
+
+                  <div class="widget-body">
+                    <div class="widget-main no-padding">
+                      <div class="dialogs">
+                        <div class="itemdiv dialogdiv">
+                          <div class="user">
+                            <img alt="Alexa's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar1.png" />
+                          </div>
+
+                          <div class="body">
+                            <div class="time">
+                              <i class="icon-time"></i>
+                              <span class="green">4秒钟前</span>
+                            </div>
+
+                            <div class="name">
+                              <a href="#">Alexa</a>
+                            </div>
+                            <div class="text">大家好啊</div>
+
+                            <div class="tools">
+                              <a href="#" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                          <div class="user">
+                            <img alt="John's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar.png" />
+                          </div>
+
+                          <div class="body">
+                            <div class="time">
+                              <i class="icon-time"></i>
+                              <span class="blue">38秒以前</span>
+                            </div>
+
+                            <div class="name">
+                              <a href="#">John</a>
+                            </div>
+                            <div class="text">框架很好用嘛</div>
+
+                            <div class="tools">
+                              <a href="#" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                          <div class="user">
+                            <img alt="Bob's Avatar" src="${ctx}/assets/plugin/ace/avatars/user.jpg" />
+                          </div>
+
+                          <div class="body">
+                            <div class="time">
+                              <i class="icon-time"></i>
+                              <span class="orange">2分钟以前</span>
+                            </div>
+
+                            <div class="name">
+                              <a href="#">Bob</a>
+                              <span class="label label-info arrowed arrowed-in-right">admin</span>
+                            </div>
+                            <div class="text">欢迎大家使用ACE后台管理系统.</div>
+
+                            <div class="tools">
+                              <a href="#" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                          <div class="user">
+                            <img alt="Jim's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar4.png" />
+                          </div>
+
+                          <div class="body">
+                            <div class="time">
+                              <i class="icon-time"></i>
+                              <span class="grey">3分钟以前</span>
+                            </div>
+
+                            <div class="name">
+                              <a href="#">Jim</a>
+                            </div>
+                            <div class="text">大家多提提BUG</div>
+
+                            <div class="tools">
+                              <a href="#" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="itemdiv dialogdiv">
+                          <div class="user">
+                            <img alt="Alexa's Avatar" src="${ctx}/assets/plugin/ace/avatars/avatar1.png" />
+                          </div>
+
+                          <div class="body">
+                            <div class="time">
+                              <i class="icon-time"></i>
+                              <span class="green">4分钟以前</span>
+                            </div>
+
+                            <div class="name">
+                              <a href="#">Alexa</a>
+                            </div>
+                            <div class="text">继续支持ACE后台系统</div>
+
+                            <div class="tools">
+                              <a href="#" class="btn btn-minier btn-info">
+                                <i class="icon-only icon-share-alt"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <form>
+                        <div class="form-actions">
+                          <div class="input-group">
+                            <input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+																<span class="input-group-btn">
+																	<button class="btn btn-sm btn-info no-radius" type="button">
+                                    <i class="icon-share-alt"></i>
+                                    发送
+                                  </button>
+																</span>
+                          </div>
+                        </div>
+                      </form>
+                    </div><!-- /widget-main -->
+                  </div><!-- /widget-body -->
+                </div><!-- /widget-box -->
+              </div><!-- /span -->
+            </div><!-- /row -->
+
+            <!-- PAGE CONTENT ENDS -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.page-content -->
+    </div><!-- /.main-content -->
+
+    <div class="ace-settings-container" id="ace-settings-container">
+      <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+        <i class="icon-cog bigger-150"></i>
+      </div>
+
+      <div class="ace-settings-box" id="ace-settings-box">
+        <div>
+          <div class="pull-left">
+            <select id="skin-colorpicker" class="hide">
+              <option data-skin="default" value="#438EB9">#438EB9</option>
+              <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+              <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+              <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+            </select>
+          </div>
+          <span>&nbsp; 选择皮肤</span>
+        </div>
+
+        <div>
+          <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+          <label class="lbl" for="ace-settings-navbar"> 固定导航条</label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+          <label class="lbl" for="ace-settings-sidebar"> 固定滑动条</label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+          <label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+          <label class="lbl" for="ace-settings-rtl">切换到左边</label>
+        </div>
+
+        <div>
+          <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+          <label class="lbl" for="ace-settings-add-container">
+            切换窄屏
+            <b></b>
+          </label>
         </div>
       </div>
-      <!-- /Page Body -->
-    </div>
-    <!-- /Page Content -->
-  </div>
-  <!-- /Page Container -->
-  <!-- Main Container -->
+    </div><!-- /#ace-settings-container -->
+  </div><!-- /.main-container-inner -->
 
-</div>
+  <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+    <i class="icon-double-angle-up icon-only bigger-110"></i>
+  </a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+<!--[if !IE]> -->
+
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='${ctx}/assets/plugin/ace/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='${ctx}/assets/plugin/ace/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+  if("ontouchend" in document) document.write("<script src='${ctx}/assets/plugin/ace/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+</script>
+<script src="${ctx}/assets/plugin/ace/js/bootstrap.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/typeahead-bs2.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="${ctx}/assets/plugin/ace/js/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="${ctx}/assets/plugin/ace/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/jquery.ui.touch-punch.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/jquery.slimscroll.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/jquery.easy-pie-chart.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/jquery.sparkline.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/flot/jquery.flot.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/flot/jquery.flot.pie.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/flot/jquery.flot.resize.min.js"></script>
+
+<!-- ace scripts -->
+
+<script src="${ctx}/assets/plugin/ace/js/ace-elements.min.js"></script>
+<script src="${ctx}/assets/plugin/ace/js/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+
+<script type="text/javascript">
+  jQuery(function($) {
+    $('.easy-pie-chart.percentage').each(function(){
+      var $box = $(this).closest('.infobox');
+      var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+      var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+      var size = parseInt($(this).data('size')) || 50;
+      $(this).easyPieChart({
+        barColor: barColor,
+        trackColor: trackColor,
+        scaleColor: false,
+        lineCap: 'butt',
+        lineWidth: parseInt(size/10),
+        animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+        size: size
+      });
+    })
+
+    $('.sparkline').each(function(){
+      var $box = $(this).closest('.infobox');
+      var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+      $(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+    });
 
 
-<script>
-  // If you want to draw your charts with Theme colors you must run initiating charts after that current skin is loaded
-  $(window).bind("load", function () {
 
-    /*Sets Themed Colors Based on Themes*/
-    themeprimary = getThemeColorFromCss('themeprimary');
-    themesecondary = getThemeColorFromCss('themesecondary');
-    themethirdcolor = getThemeColorFromCss('themethirdcolor');
-    themefourthcolor = getThemeColorFromCss('themefourthcolor');
-    themefifthcolor = getThemeColorFromCss('themefifthcolor');
 
-    //Sets The Hidden Chart Width
-    $('#dashboard-bandwidth-chart')
-        .data('width', $('.box-tabbs')
-            .width() - 20);
-
-    //-------------------------Visitor Sources Pie Chart----------------------------------------//
+    var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
     var data = [
-      {
-        data: [[1, 21]],
-        color: '#fb6e52'
-      },
-      {
-        data: [[1, 12]],
-        color: '#e75b8d'
-      },
-      {
-        data: [[1, 11]],
-        color: '#a0d468'
-      },
-      {
-        data: [[1, 10]],
-        color: '#ffce55'
-      },
-      {
-        data: [[1, 46]],
-        color: '#5db2ff'
-      }
-    ];
-    var placeholder = $("#dashboard-pie-chart-sources");
-    placeholder.unbind();
-
-    $.plot(placeholder, data, {
-      series: {
-        pie: {
-          innerRadius: 0.45,
-          show: true,
-          stroke: {
-            width: 4
+      { label: "social networks",  data: 38.7, color: "#68BC31"},
+      { label: "search engines",  data: 24.5, color: "#2091CF"},
+      { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+      { label: "direct traffic",  data: 18.6, color: "#DA5430"},
+      { label: "other",  data: 10, color: "#FEE074"}
+    ]
+    function drawPieChart(placeholder, data, position) {
+      $.plot(placeholder, data, {
+        series: {
+          pie: {
+            show: true,
+            tilt:0.8,
+            highlight: {
+              opacity: 0.25
+            },
+            stroke: {
+              color: '#fff',
+              width: 2
+            },
+            startAngle: 2
           }
+        },
+        legend: {
+          show: true,
+          position: position || "ne",
+          labelBoxBorderColor: null,
+          margin:[-30,15]
         }
+        ,
+        grid: {
+          hoverable: true,
+          clickable: true
+        }
+      })
+    }
+    drawPieChart(placeholder, data);
+
+    /**
+     we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+     so that's not needed actually.
+     */
+    placeholder.data('chart', data);
+    placeholder.data('draw', drawPieChart);
+
+
+
+    var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+    var previousPoint = null;
+
+    placeholder.on('plothover', function (event, pos, item) {
+      if(item) {
+        if (previousPoint != item.seriesIndex) {
+          previousPoint = item.seriesIndex;
+          var tip = item.series['label'] + " : " + item.series['percent']+'%';
+          $tooltip.show().children(0).text(tip);
+        }
+        $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+      } else {
+        $tooltip.hide();
+        previousPoint = null;
+      }
+
+    });
+
+
+
+
+
+
+    var d1 = [];
+    for (var i = 0; i < Math.PI * 2; i += 0.5) {
+      d1.push([i, Math.sin(i)]);
+    }
+
+    var d2 = [];
+    for (var i = 0; i < Math.PI * 2; i += 0.5) {
+      d2.push([i, Math.cos(i)]);
+    }
+
+    var d3 = [];
+    for (var i = 0; i < Math.PI * 2; i += 0.2) {
+      d3.push([i, Math.tan(i)]);
+    }
+
+
+    var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+    $.plot("#sales-charts", [
+      { label: "Domains", data: d1 },
+      { label: "Hosting", data: d2 },
+      { label: "Services", data: d3 }
+    ], {
+      hoverable: true,
+      shadowSize: 0,
+      series: {
+        lines: { show: true },
+        points: { show: true }
+      },
+      xaxis: {
+        tickLength: 0
+      },
+      yaxis: {
+        ticks: 10,
+        min: -2,
+        max: 2,
+        tickDecimals: 3
+      },
+      grid: {
+        backgroundColor: { colors: [ "#fff", "#fff" ] },
+        borderWidth: 1,
+        borderColor:'#555'
       }
     });
 
-    //------------------------------Visit Chart------------------------------------------------//
-    var data2 = [{
-      color: themesecondary,
-      label: "Direct Visits",
-      data: [[3, 2], [4, 5], [5, 4], [6, 11], [7, 12], [8, 11], [9, 8], [10, 14], [11, 12], [12, 16], [13, 9],
-        [14, 10], [15, 14], [16, 15], [17, 9]],
 
-      lines: {
-        show: true,
-        fill: true,
-        lineWidth: .1,
-        fillColor: {
-          colors: [{
-            opacity: 0
-          }, {
-            opacity: 0.4
-          }]
-        }
-      },
-      points: {
-        show: false
-      },
-      shadowSize: 0
-    },
-      {
-        color: themeprimary,
-        label: "Referral Visits",
-        data: [[3, 10], [4, 13], [5, 12], [6, 16], [7, 19], [8, 19], [9, 24], [10, 19], [11, 18], [12, 21], [13, 17],
-          [14, 14], [15, 12], [16, 14], [17, 15]],
-        bars: {
-          order: 1,
-          show: true,
-          borderWidth: 0,
-          barWidth: 0.4,
-          lineWidth: .5,
-          fillColor: {
-            colors: [{
-              opacity: 0.4
-            }, {
-              opacity: 1
-            }]
-          }
-        }
-      },
-      {
-        color: themethirdcolor,
-        label: "Search Engines",
-        data: [[3, 14], [4, 11], [5, 10], [6, 9], [7, 5], [8, 8], [9, 5], [10, 6], [11, 4], [12, 7], [13, 4],
-          [14, 3], [15, 4], [16, 6], [17, 4]],
-        lines: {
-          show: true,
-          fill: false,
-          fillColor: {
-            colors: [{
-              opacity: 0.3
-            }, {
-              opacity: 0
-            }]
-          }
-        },
-        points: {
-          show: true
-        }
-      }
-    ];
-    var options = {
-      legend: {
-        show: false
-      },
-      xaxis: {
-        tickDecimals: 0,
-        color: '#f3f3f3'
-      },
-      yaxis: {
-        min: 0,
-        color: '#f3f3f3',
-        tickFormatter: function (val, axis) {
-          return "";
-        },
-      },
-      grid: {
-        hoverable: true,
-        clickable: false,
-        borderWidth: 0,
-        aboveData: false,
-        color: '#fbfbfb'
+    $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+    function tooltip_placement(context, source) {
+      var $source = $(source);
+      var $parent = $source.closest('.tab-content')
+      var off1 = $parent.offset();
+      var w1 = $parent.width();
 
-      },
-      tooltip: true,
-      tooltipOpts: {
-        defaultTheme: false,
-        content: " <b>%x May</b> , <b>%s</b> : <span>%y</span>",
-      }
-    };
-    var placeholder = $("#dashboard-chart-visits");
-    var plot = $.plot(placeholder, data2, options);
+      var off2 = $source.offset();
+      var w2 = $source.width();
 
-    //------------------------------Real-Time Chart-------------------------------------------//
-    var data = [],
-        totalPoints = 300;
-
-    function getRandomData() {
-
-      if (data.length > 0)
-        data = data.slice(1);
-
-      // Do a random walk
-
-      while (data.length < totalPoints) {
-
-        var prev = data.length > 0 ? data[data.length - 1] : 50,
-            y = prev + Math.random() * 10 - 5;
-
-        if (y < 0) {
-          y = 0;
-        } else if (y > 100) {
-          y = 100;
-        }
-
-        data.push(y);
-      }
-
-      // Zip the generated y values with the x values
-
-      var res = [];
-      for (var i = 0; i < data.length; ++i) {
-        res.push([i, data[i]]);
-      }
-
-      return res;
+      if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+      return 'left';
     }
-    // Set up the control widget
-    var updateInterval = 100;
-    var plot = $.plot("#dashboard-chart-realtime", [getRandomData()], {
-      yaxis: {
-        color: '#f3f3f3',
-        min: 0,
-        max: 100,
-        tickFormatter: function (val, axis) {
-          return "";
-        }
-      },
-      xaxis: {
-        color: '#f3f3f3',
-        min: 0,
-        max: 100,
-        tickFormatter: function (val, axis) {
-          return "";
-        }
-      },
-      colors: [themeprimary],
-      series: {
-        lines: {
-          lineWidth: 0,
-          fill: true,
-          fillColor: {
-            colors: [{
-              opacity: 0.5
-            }, {
-              opacity: 0
-            }]
-          },
-          steps: false
-        },
-        shadowSize: 0
-      },
-      grid: {
-        hoverable: true,
-        clickable: false,
-        borderWidth: 0,
-        aboveData: false
-      }
+
+
+    $('.dialogs,.comments').slimScroll({
+      height: '300px'
     });
 
-    function update() {
 
-      plot.setData([getRandomData()]);
+    //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+    //so disable dragging when clicking on label
+    var agent = navigator.userAgent.toLowerCase();
+    if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+      $('#tasks').on('touchstart', function(e){
+        var li = $(e.target).closest('#tasks li');
+        if(li.length == 0)return;
+        var label = li.find('label.inline').get(0);
+        if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+      });
 
-      plot.draw();
-      setTimeout(update, updateInterval);
-    }
-    update();
+    $('#tasks').sortable({
+          opacity:0.8,
+          revert:true,
+          forceHelperSize:true,
+          placeholder: 'draggable-placeholder',
+          forcePlaceholderSize:true,
+          tolerance:'pointer',
+          stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+            $(ui.item).css('z-index', 'auto');
+          }
+        }
+    );
+    $('#tasks').disableSelection();
+    $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+      if(this.checked) $(this).closest('li').addClass('selected');
+      else $(this).closest('li').removeClass('selected');
+    });
 
 
-    //-------------------------Initiates Easy Pie Chart instances in page--------------------//
-    InitiateEasyPieChart.init();
-
-    //-------------------------Initiates Sparkline Chart instances in page------------------//
-    InitiateSparklineCharts.init();
-  });
-
+  })
 </script>
-<!--Google Analytics::Demo Only-->
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-52103994-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
-<!--  /Body -->
 </html>
+
+
