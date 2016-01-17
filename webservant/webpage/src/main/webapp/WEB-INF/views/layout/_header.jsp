@@ -17,6 +17,7 @@
       <ul id="navbar-module-status" class="nav navbar-nav navbar-right">
         <li><a href="${ctx}/cover/index.do">Cover</a></li>
         <li><a href="${ctx}/family/index.do">Family</a></li>
+        <li><a href="${ctx}/basket/index.do">Basket</a></li>
         <li><a href="${ctx}/resume/index.do">Resume</a></li>
         <li><a href="${ctx}/system/index.do">System</a></li>
       </ul>

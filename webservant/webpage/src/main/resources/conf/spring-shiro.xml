@@ -22,6 +22,7 @@
               </property>
               <property name="filterChainDefinitions">
                      <value>
+                         /basket/** = anon
                        /login.do = authc
                        /logout.do = logout
                        /assets/** = anon

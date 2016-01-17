@@ -1,7 +1,7 @@
 webservant/rootparent/target/
 webservant/resume/target/
-webservant/.idea/
 webservant/webpage/target/
 /webservant/webpage/webpage.iml
+/webservant/webpage/target
 /webservant/rootparent/rootparent.iml
 /.idea
