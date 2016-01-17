@@ -1,5 +1,6 @@
 webservant/rootparent/target/
 webservant/resume/target/
+/out
 webservant/webpage/target/
 /webservant/webpage/webpage.iml
 /webservant/webpage/target
